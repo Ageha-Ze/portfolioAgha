@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Aghasy Rezandi Pratama Dewanata · Two Tracks, One Career</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Space+Grotesk:wght@500;600;700&display=swap');
 
     :root {
       --ink: #141414;
@@ -17,9 +17,10 @@
       --paper-alt: #F6F4EF;
       --line: #E2DED2;
 
-      --mono: 'IBM Plex Mono', monospace;
-      --sans: 'Inter', sans-serif;
-      --serif: 'Fraunces', serif;
+        --mono: 'IBM Plex Mono', monospace;
+  --sans: 'Inter', sans-serif;
+  --serif: 'Fraunces', serif;
+  --grotesk: 'Space Grotesk', sans-serif;
     }
 
     * {
@@ -166,6 +167,114 @@
       }
     }
 
+    .nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav-burger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--paper);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(.16,1,.3,1), opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu a {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  transition: color 0.2s;
+}
+
+.mobile-menu a.active,
+.mobile-menu a:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.mobile-menu-cta {
+  margin-top: 20px;
+  font-family: var(--mono) !important;
+  font-size: 16px !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 5px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width:600px) {
+  .nav {
+    padding: 14px 16px;
+  }
+
+  .nav-brand {
+    font-size: 13px;
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-burger {
+    display: flex;
+  }
+}
+
     /* ---------- hero photo (signature: real photo, monochrome, static) ---------- */
     .hero-photo {
       position: fixed;
@@ -303,18 +412,20 @@
     }
 
     .tag-tech {
-      font-family: var(--mono);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--ink);
-      font-weight: 600;
-    }
+  font-family: var(--grotesk);
+  font-size: 14px; /* naik dari 12.5px default */
+  font-weight: 700; /* naik dari 600, pakai bold penuh */
+  text-transform: uppercase;
+  letter-spacing: 0.06em; /* dikurangi dikit karena huruf lebih lebar dari mono */
+  color: var(--ink);
+}
 
     .tag-biz {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 600;
-      color: var(--ink-soft);
+  font-family: var(--grotesk);
+      text-transform: uppercase;
+ font-size: 14px; /* naik dari 12.5px default */
+  font-weight: 700; /* naik dari 600, pakai bold penuh */      
+  color: var(--ink-soft);
     }
 
     .hero-scroll-cue {
@@ -1384,14 +1495,29 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-brand">A.R.P.D</div>
+  
     <div class="nav-links">
       <a href="#profile" data-nav="profile">Profile</a>
       <a href="#timeline" data-nav="timeline">Timeline</a>
       <a href="#work" data-nav="work">Work</a>
       <a href="#contact" data-nav="contact">Contact</a>
-      <a href="#contact" class="nav-cta">Get in Touch</a>
     </div>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+  
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+  
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#profile" data-nav="profile">Profile</a>
+    <a href="#timeline" data-nav="timeline">Timeline</a>
+    <a href="#work" data-nav="work">Work</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+    <a href="#contact" class="mobile-menu-cta">Get in Touch</a>
+  </div>
 
   <!-- HERO PHOTO: real photo, forced grayscale, static (no parallax) -->
   <div class="hero-photo" id="heroPhoto">
@@ -1403,7 +1529,7 @@
     <div class="hero-overlay">
       <span class="hero-eyebrow">// two tracks. one person.</span>
       <div class="hero-name">Aghasy Rezandi<br>Pratama Dewanata</div>
-      <div class="hero-role">Two tracks. One person.</div>
+<div class="hero-role">QA specialist by trade, builder &amp; entrepreneur by choice.</div>
       <div class="hero-tags">
         <span class="tag-tech">QA Tester &amp; Product Builder</span>
         <span class="tag-dot"></span>
@@ -1929,7 +2055,7 @@
     }, { threshold: 0.3 });
     bars.forEach(b => observer.observe(b));
     // scroll-spy for nav
-    const navLinks = document.querySelectorAll('.nav-links a');
+   const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-menu a[data-nav]');
     const sections = ['profile', 'timeline', 'work', 'contact']
       .map(id => document.getElementById(id))
       .filter(Boolean);
@@ -1938,7 +2064,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          navLinks.forEach(link => {
+          allNavLinks.forEach(link => {
             link.classList.toggle('active', link.dataset.nav === id);
           });
         }
@@ -1979,6 +2105,24 @@
         img.addEventListener('error', () => img.closest('.browser-body')?.classList.add('is-loaded'));
       }
     });
+
+    const navBurger = document.getElementById('navBurger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      function toggleMobileMenu(forceClose = false) {
+        const isOpen = mobileMenu.classList.contains('is-open');
+        const shouldOpen = forceClose ? false : !isOpen;
+
+        mobileMenu.classList.toggle('is-open', shouldOpen);
+        navBurger.setAttribute('aria-expanded', String(shouldOpen));
+        document.body.classList.toggle('menu-open', shouldOpen);
+      }
+
+      navBurger.addEventListener('click', () => toggleMobileMenu());
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+      });
   </script>
 
 </body>
