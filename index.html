@@ -696,44 +696,72 @@
     }
 
     .seo-rich-section {
-      padding: 54px 0 24px;
+      padding: 78px 0 48px;
       border-bottom: 1px solid var(--line);
       background: var(--paper);
     }
 
     .seo-rich-card {
-      max-width: 900px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 28px 32px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(246, 244, 239, 0.7), rgba(255, 255, 255, 0.95));
+      padding: 0 0 4px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .seo-rich-card::before {
+      display: none;
+    }
+
+    .seo-rich-card .eyebrow {
+      margin-bottom: 18px;
+      color: var(--ink-soft);
+      font-weight: 600;
+      display: inline-block;
     }
 
     .seo-rich-card h2 {
       font-family: var(--sans);
-      font-size: 24px;
+      font-size: clamp(22px, 3.4vw, 32px);
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       color: var(--ink);
+      line-height: 1.12;
+      max-width: 860px;
     }
 
     .seo-rich-card p {
-      font-size: 15px;
-      line-height: 1.8;
+      max-width: 800px;
+      font-size: 15.5px;
+      line-height: 1.85;
       color: var(--ink-soft);
       margin-bottom: 12px;
     }
 
+    .seo-rich-card p:first-of-type {
+      font-size: 16px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
     @media (max-width: 820px) {
       .seo-rich-section {
-        padding: 40px 0 20px;
+        padding: 54px 0 32px;
       }
 
-      .seo-rich-card {
-        padding: 24px 20px;
+      .seo-rich-card h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+
+      .seo-rich-card p {
+        font-size: 15px;
+        line-height: 1.8;
       }
     }
 
@@ -1749,9 +1777,10 @@
       <div class="wrap">
         <div class="seo-rich-card">
           <span class="eyebrow">about</span>
-          <h2>QA Tester, Product Builder &amp; Entrepreneur</h2>
-          <p>I combine quality assurance discipline with hands-on product development to build reliable software, modern web experiences, and practical digital businesses. My background spans manual testing, product delivery, and entrepreneurship across startups and client projects.</p>
-          <p>From shipping software products to supporting small businesses with online storefronts, I focus on turning ideas into dependable products that are clear, usable, and ready to grow.</p>
+          <h2>Work across two worlds: software quality and entrepreneurship.</h2>
+          <p>I did not come from a traditional engineering path. I spent years working on product quality, first in mobile games and later across software products, learning how strong experiences are shaped by detail, discipline, and iteration.</p>
+          <p>I build reliable software through quality assurance while creating digital products and running a small business. Today,
+          I'm exploring AI-assisted development to turn ideas into products without losing sight of the fundamentals.</p>
         </div>
       </div>
     </div>
