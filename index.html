@@ -6,6 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Aghasy Rezandi Pratama Dewanata · Two Tracks, One Career</title>
+  <meta name="description"
+    content="QA Engineer, Product Builder, and Entrepreneur. Building reliable software, modern web applications, and digital businesses.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portfolio-agha.vercel.app/">
+  <meta property="og:title" content="Aghasy Rezandi Pratama Dewanata">
+  <meta property="og:description" content="Two Tracks. One Career. QA Engineer, Product Builder & Entrepreneur.">
+  
+  <meta property="og:image" content="https://portfolio-agha.vercel.app/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aghasy Rezandi Pratama Dewanata">
+  <meta name="twitter:description" content="Two Tracks. One Career. QA Engineer, Product Builder & Entrepreneur.">
+  <meta name="twitter:image" content="https://portfolio-agha.vercel.app/og-cover.jpg">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Space+Grotesk:wght@500;600;700&display=swap');
 
@@ -16,32 +34,33 @@
       --paper: #FFFFFF;
       --paper-alt: #F6F4EF;
       --line: #E2DED2;
+
       --mono: 'IBM Plex Mono', monospace;
       --sans: 'Inter', sans-serif;
       --serif: 'Fraunces', serif;
-      --grotesk: 'Space Grotesk', sans-serif
+      --grotesk: 'Space Grotesk', sans-serif;
     }
 
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
-      overflow-x: hidden
+      overflow-x: hidden;
     }
 
-    @media (prefers-reduced-motion:reduce) {
+    @media (prefers-reduced-motion: reduce) {
       html {
-        scroll-behavior: auto
+        scroll-behavior: auto;
       }
 
       * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important
+        transition-duration: 0.01ms !important;
       }
     }
 
@@ -51,39 +70,41 @@
       font-family: var(--sans);
       line-height: 1.6;
       font-size: 16px;
-      overflow-x: hidden
+      overflow-x: hidden;
     }
 
+    /* global image safety net — prevents any image from forcing horizontal overflow */
     img {
       max-width: 100%;
-      height: auto
+      height: auto;
     }
 
     a {
       color: inherit;
-      text-decoration: none
+      text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline
+      text-decoration: underline;
     }
 
     a:focus-visible,
     button:focus-visible {
       outline: 2px solid var(--ink);
-      outline-offset: 2px
+      outline-offset: 2px;
     }
 
     ::selection {
-      background: rgba(20, 20, 20, 0.12)
+      background: rgba(20, 20, 20, 0.12);
     }
 
     .wrap {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 0 20px
+      padding: 0 20px;
     }
 
+    /* ---------- nav ---------- */
     .nav {
       position: sticky;
       top: 0;
@@ -93,7 +114,7 @@
       align-items: center;
       padding: 22px 32px;
       background: var(--paper);
-      border-bottom: 1px solid var(--line)
+      border-bottom: 1px solid var(--line);
     }
 
     .nav-brand {
@@ -102,13 +123,13 @@
       font-size: 16px;
       letter-spacing: 0.03em;
       text-transform: uppercase;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px
+      gap: 26px;
     }
 
     .nav-links a {
@@ -120,18 +141,18 @@
       color: var(--ink-soft);
       padding-bottom: 4px;
       border-bottom: 1px solid transparent;
-      transition: color 0.2s, border-color 0.2s
+      transition: color 0.2s, border-color 0.2s;
     }
 
     .nav-links a.active {
       color: var(--ink);
-      border-bottom-color: var(--ink)
+      border-bottom-color: var(--ink);
     }
 
     .nav-links a:hover {
       color: var(--ink);
       text-decoration: none;
-      border-bottom-color: var(--ink)
+      border-bottom-color: var(--ink);
     }
 
     .nav-cta {
@@ -143,29 +164,29 @@
       color: var(--ink);
       padding-bottom: 4px;
       border-bottom: 1px solid var(--ink);
-      transition: opacity 0.2s
+      transition: opacity 0.2s;
     }
 
     .nav-cta:hover {
       opacity: 0.6;
-      text-decoration: none
+      text-decoration: none;
     }
 
     @media (max-width:600px) {
       .nav {
-        padding: 16px 20px
+        padding: 16px 20px;
       }
 
       .nav-links {
-        gap: 14px
+        gap: 14px;
       }
 
       .nav-links a {
-        font-size: 9.5px
+        font-size: 9.5px;
       }
 
       .nav-cta {
-        font-size: 9px
+        font-size: 9px;
       }
     }
 
@@ -180,7 +201,7 @@
       border: none;
       cursor: pointer;
       padding: 0;
-      flex-shrink: 0
+      flex-shrink: 0;
     }
 
     .nav-burger span {
@@ -188,19 +209,19 @@
       width: 100%;
       height: 1.5px;
       background: var(--ink);
-      transition: transform 0.25s ease, opacity 0.2s ease
+      transition: transform 0.25s ease, opacity 0.2s ease;
     }
 
     .nav-burger[aria-expanded="true"] span:nth-child(1) {
-      transform: translateY(6.5px) rotate(45deg)
+      transform: translateY(6.5px) rotate(45deg);
     }
 
     .nav-burger[aria-expanded="true"] span:nth-child(2) {
-      opacity: 0
+      opacity: 0;
     }
 
     .nav-burger[aria-expanded="true"] span:nth-child(3) {
-      transform: translateY(-6.5px) rotate(-45deg)
+      transform: translateY(-6.5px) rotate(-45deg);
     }
 
     .mobile-menu {
@@ -219,13 +240,13 @@
       transform: translateY(-100%);
       opacity: 0;
       transition: transform 0.35s cubic-bezier(.16, 1, .3, 1), opacity 0.3s ease;
-      pointer-events: none
+      pointer-events: none;
     }
 
     .mobile-menu.is-open {
       transform: translateY(0);
       opacity: 1;
-      pointer-events: auto
+      pointer-events: auto;
     }
 
     .mobile-menu a {
@@ -235,13 +256,13 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: var(--ink-soft);
-      transition: color 0.2s
+      transition: color 0.2s;
     }
 
     .mobile-menu a.active,
     .mobile-menu a:hover {
       color: var(--ink);
-      text-decoration: none
+      text-decoration: none;
     }
 
     .mobile-menu-cta {
@@ -251,32 +272,33 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       border-bottom: 1px solid var(--ink);
-      padding-bottom: 5px
+      padding-bottom: 5px;
     }
 
     body.menu-open {
-      overflow: hidden
+      overflow: hidden;
     }
 
     @media (max-width:600px) {
       .nav {
-        padding: 14px 16px
+        padding: 14px 16px;
       }
 
       .nav-brand {
-        font-size: 13px
+        font-size: 13px;
       }
 
       .nav-links,
       .nav-cta {
-        display: none
+        display: none;
       }
 
       .nav-burger {
-        display: flex
+        display: flex;
       }
     }
 
+    /* ---------- hero photo (signature: real photo, monochrome, static) ---------- */
     .hero-photo {
       position: fixed;
       top: 0;
@@ -287,24 +309,25 @@
       overflow: hidden;
       background: var(--paper);
       border-bottom: 1px solid var(--line);
-      z-index: 0
+      z-index: 0;
     }
 
+    /* wraps everything below the hero so it scrolls over the pinned photo */
     .page-content {
       position: relative;
       z-index: 1;
       background: var(--paper);
-      margin-top: 100vh
+      margin-top: 100vh;
     }
 
     @media (max-width:640px) {
       .hero-photo {
         position: relative;
-        height: 100vh
+        height: 100vh;
       }
 
       .page-content {
-        margin-top: 0
+        margin-top: 0;
       }
     }
 
@@ -316,14 +339,16 @@
       height: 100%;
       object-fit: cover;
       object-position: center 30%;
-      filter: contrast(1.03) brightness(1.01)
+      filter: contrast(1.03) brightness(1.01);
     }
 
     .hero-photo-scrim {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 46% at 50% 40%, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.2) 55%, rgba(255, 255, 255, 0) 75%), linear-gradient(to bottom, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 68%, rgba(20, 20, 20, 0.3) 100%);
-      pointer-events: none
+      background:
+        radial-gradient(ellipse 60% 46% at 50% 40%, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.2) 55%, rgba(255, 255, 255, 0) 75%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 68%, rgba(20, 20, 20, 0.3) 100%);
+      pointer-events: none;
     }
 
     .hero-photo-credit {
@@ -334,12 +359,12 @@
       font-family: var(--mono);
       font-size: 9.5px;
       letter-spacing: 0.03em;
-      color: rgba(20, 20, 20, 0.45)
+      color: rgba(20, 20, 20, 0.45);
     }
 
     .hero-photo-credit a {
       color: rgba(20, 20, 20, 0.55);
-      border-bottom: 1px solid rgba(20, 20, 20, 0.25)
+      border-bottom: 1px solid rgba(20, 20, 20, 0.25);
     }
 
     .hero-overlay {
@@ -352,7 +377,7 @@
       justify-content: center;
       text-align: center;
       padding: 0 24px;
-      pointer-events: none
+      pointer-events: none;
     }
 
     .hero-eyebrow {
@@ -361,7 +386,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--ink-soft);
-      margin-bottom: 18px
+      margin-bottom: 18px;
     }
 
     .hero-name {
@@ -371,7 +396,7 @@
       letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--ink);
-      line-height: 1.08
+      line-height: 1.08;
     }
 
     .hero-role {
@@ -380,7 +405,7 @@
       font-weight: 500;
       font-size: clamp(14px, 2vw, 19px);
       color: var(--ink-soft);
-      margin-top: 14px
+      margin-top: 14px;
     }
 
     .hero-tags {
@@ -389,7 +414,7 @@
       align-items: center;
       gap: 16px;
       margin-top: 30px;
-      flex-wrap: wrap
+      flex-wrap: wrap;
     }
 
     .tag-dot {
@@ -397,7 +422,7 @@
       height: 5px;
       border-radius: 50%;
       background: var(--ink-soft);
-      flex-shrink: 0
+      flex-shrink: 0;
     }
 
     .tag-tech,
@@ -406,7 +431,7 @@
       letter-spacing: 0.05em;
       background: none;
       border: none;
-      padding: 0
+      padding: 0;
     }
 
     .tag-tech {
@@ -415,7 +440,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .tag-biz {
@@ -423,7 +448,7 @@
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 700;
-      color: var(--ink-soft)
+      color: var(--ink-soft);
     }
 
     .hero-scroll-cue {
@@ -440,7 +465,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px
+      gap: 6px;
     }
 
     .hero-scroll-cue .stem {
@@ -448,28 +473,28 @@
       height: 26px;
       background: var(--ink-soft);
       animation: scrollpulse 1.8s ease-in-out infinite;
-      transform-origin: top
+      transform-origin: top;
     }
 
     @keyframes scrollpulse {
 
       0%,
       100% {
-        opacity: 0.25
+        opacity: 0.25;
       }
 
       50% {
-        opacity: 1
+        opacity: 1;
       }
     }
 
     @media (max-width:640px) {
       .hero-name {
-        font-size: 8vw
+        font-size: 8vw;
       }
 
       .hero-photo-credit {
-        display: none
+        display: none;
       }
     }
 
@@ -477,28 +502,28 @@
       padding: 44px 20px 56px;
       text-align: center;
       background: var(--paper);
-      border-bottom: 1px solid var(--line)
+      border-bottom: 1px solid var(--line);
     }
 
     .stat-strip {
       display: flex;
       justify-content: center;
       gap: 56px;
-      flex-wrap: wrap
+      flex-wrap: wrap;
     }
 
     .stat-item {
-      text-align: center
+      text-align: center;
     }
 
     .stat-icon {
       color: var(--ink-soft);
-      margin-bottom: 10px
+      margin-bottom: 10px;
     }
 
     .stat-icon svg {
       width: 20px;
-      height: 20px
+      height: 20px;
     }
 
     .stat-num {
@@ -507,7 +532,7 @@
       font-weight: 600;
       color: var(--ink);
       font-size: 26px;
-      line-height: 1
+      line-height: 1;
     }
 
     .stat-label {
@@ -516,49 +541,50 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--ink-soft);
-      margin-top: 8px
+      margin-top: 8px;
     }
 
+    /* ---------- shared halves ---------- */
     .halves {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
-      border-bottom: 1px solid var(--line)
+      border-bottom: 1px solid var(--line);
     }
 
     @media (max-width:820px) {
       .halves {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
     }
 
-    .side-tech {
-      background: var(--paper);
-      color: var(--ink);
-      border-right: 1px solid var(--line);
-      min-width: 0
-    }
+   .side-tech {
+  background: var(--paper);
+  color: var(--ink);
+  border-right: 1px solid var(--line);
+  min-width: 0;
+}
 
-    .side-biz {
-      background: var(--paper);
-      color: var(--ink);
-      min-width: 0
-    }
+.side-biz {
+  background: var(--paper);
+  color: var(--ink);
+  min-width: 0;
+}
 
     @media (max-width:820px) {
       .side-tech {
         border-right: none;
-        border-bottom: 1px solid var(--line)
+        border-bottom: 1px solid var(--line);
       }
     }
 
     .side-pad {
-      padding: 64px 48px
+      padding: 64px 48px;
     }
 
     @media (max-width:820px) {
       .side-pad {
-        padding: 44px 28px
+        padding: 44px 28px;
       }
     }
 
@@ -569,7 +595,7 @@
       text-transform: uppercase;
       color: var(--ink-soft);
       margin-bottom: 16px;
-      display: inline-block
+      display: inline-block;
     }
 
     .side-tech h2 {
@@ -578,7 +604,7 @@
       font-size: 25px;
       text-transform: uppercase;
       letter-spacing: 0.01em;
-      margin-bottom: 22px
+      margin-bottom: 22px;
     }
 
     .side-biz h2 {
@@ -586,24 +612,27 @@
       font-style: italic;
       font-weight: 600;
       font-size: 28px;
-      margin-bottom: 22px
+      margin-bottom: 22px;
     }
 
+    /* ---------- profile summary ---------- */
     .summary-text {
       font-size: 15px;
       color: var(--ink-soft);
-      line-height: 1.75
+      line-height: 1.75;
     }
 
     .summary-text+.summary-text {
-      margin-top: 16px
+      margin-top: 16px;
     }
 
     .objective-section {
       width: 100%;
-      background: linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87)), url('hero2.jpg') center 42%/cover no-repeat;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87)),
+        url('hero2.jpg') center 42%/cover no-repeat;
       border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line)
+      border-bottom: 1px solid var(--line);
     }
 
     .objective-bar {
@@ -616,7 +645,7 @@
       font-weight: 500;
       font-size: 19px;
       line-height: 1.7;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .objective-bar .quote-mark {
@@ -627,11 +656,12 @@
       font-size: 64px;
       line-height: 1;
       color: var(--ink-faint);
-      margin-bottom: 8px
+      margin-bottom: 8px;
     }
 
+    /* ---------- coverage bars ---------- */
     .cov-item+.cov-item {
-      margin-top: 22px
+      margin-top: 22px;
     }
 
     .cov-label {
@@ -643,7 +673,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--ink-soft);
-      margin-bottom: 9px
+      margin-bottom: 9px;
     }
 
     .cov-label .pct {
@@ -652,14 +682,14 @@
       font-size: 13px;
       color: var(--ink);
       letter-spacing: normal;
-      text-transform: none
+      text-transform: none;
     }
 
     .cov-track {
       height: 10px;
       background: var(--line);
       border-radius: 20px;
-      overflow: hidden
+      overflow: hidden;
     }
 
     .cov-fill {
@@ -667,18 +697,21 @@
       width: 0%;
       background: var(--ink);
       border-radius: 20px;
-      transition: width 1.1s cubic-bezier(.16, 1, .3, 1)
+      transition: width 1.1s cubic-bezier(.16, 1, .3, 1);
     }
 
+    /* ---------- timeline (signature) ---------- */
     .timeline-head {
       text-align: center;
       padding: 96px 20px 10px;
-      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.78)), url('Work-History.jpg') center 30%/cover no-repeat;
-      background-attachment: fixed
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.78)),
+        url('Work-History.jpg') center 30%/cover no-repeat;
+      background-attachment: fixed;
     }
 
     .timeline-head .eyebrow {
-      color: var(--ink-soft)
+      color: var(--ink-soft);
     }
 
     .timeline-head h2 {
@@ -687,7 +720,7 @@
       font-size: 32px;
       text-transform: uppercase;
       color: var(--ink);
-      letter-spacing: 0.005em
+      letter-spacing: 0.005em;
     }
 
     .timeline-head p {
@@ -695,13 +728,15 @@
       font-style: italic;
       font-size: 15px;
       color: var(--ink-soft);
-      margin-top: 12px
+      margin-top: 12px;
     }
 
     .timeline {
-      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url('Work-History.jpg') center 30%/cover no-repeat;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)),
+        url('Work-History.jpg') center 30%/cover no-repeat;
       background-attachment: fixed;
-      padding: 20px 0 90px
+      padding: 20px 0 90px;
     }
 
     .era {
@@ -709,35 +744,35 @@
       grid-template-columns: 1fr 76px 1fr;
       align-items: stretch;
       max-width: 1180px;
-      margin: 0 auto
+      margin: 0 auto;
     }
 
     @media (max-width:820px) {
       .era {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
       .timeline-head,
       .timeline {
-        background-attachment: scroll
+        background-attachment: scroll;
       }
     }
 
     .era-tech,
     .era-biz {
-      padding: 22px 24px
+      padding: 22px 24px;
     }
 
     .era-tech {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start
+      justify-content: flex-start;
     }
 
     .era-biz {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start
+      justify-content: flex-start;
     }
 
     .era-spine {
@@ -745,7 +780,7 @@
       flex-direction: column;
       align-items: center;
       position: relative;
-      padding: 22px 0
+      padding: 22px 0;
     }
 
     .era-spine::before {
@@ -756,15 +791,15 @@
       left: 50%;
       width: 1px;
       background: var(--line);
-      transform: translateX(-50%)
+      transform: translateX(-50%);
     }
 
     .era:first-child .era-spine::before {
-      top: 50%
+      top: 50%;
     }
 
     .era:last-child .era-spine::before {
-      bottom: 50%
+      bottom: 50%;
     }
 
     .era-dot {
@@ -775,7 +810,7 @@
       border: 2px solid var(--paper);
       position: relative;
       z-index: 1;
-      box-shadow: 0 0 0 1px var(--ink)
+      box-shadow: 0 0 0 1px var(--ink);
     }
 
     .era-year {
@@ -788,7 +823,7 @@
       line-height: 1.4;
       position: relative;
       z-index: 1;
-      padding: 2px 4px
+      padding: 2px 4px;
     }
 
     @media (max-width:820px) {
@@ -796,21 +831,22 @@
         flex-direction: row;
         justify-content: flex-start;
         gap: 10px;
-        padding: 14px 24px 0
+        padding: 14px 24px 0;
       }
 
       .era-spine::before {
-        display: none
+        display: none;
       }
 
       .era-year {
         background: none;
         padding: 0;
         text-align: left;
-        margin-top: 0
+        margin-top: 0;
       }
     }
 
+    /* ---------- era collapse/expand ---------- */
     .era-toggle {
       margin-top: 12px;
       width: 24px;
@@ -827,27 +863,27 @@
       justify-content: center;
       position: relative;
       z-index: 1;
-      transition: border-color 0.2s, color 0.2s
+      transition: border-color 0.2s, color 0.2s;
     }
 
     .era-toggle:hover {
       border-color: var(--ink);
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .era-toggle-icon {
       display: inline-block;
       line-height: 1;
-      transition: transform 0.2s
+      transition: transform 0.2s;
     }
 
     .era-collapsible[data-collapsed="false"] .era-toggle-icon {
-      transform: rotate(45deg)
+      transform: rotate(45deg);
     }
 
     @media (max-width:820px) {
       .era-toggle {
-        margin-top: 0
+        margin-top: 0;
       }
     }
 
@@ -858,36 +894,36 @@
       color: var(--ink-faint);
       cursor: pointer;
       padding: 8px 4px;
-      transition: color 0.2s
+      transition: color 0.2s;
     }
 
     .era-summary-line:hover {
       color: var(--ink-soft);
-      text-decoration: underline
+      text-decoration: underline;
     }
 
     .era-detail {
-      display: none
+      display: none;
     }
 
     .era-collapsible[data-collapsed="false"] .era-detail {
       display: block;
-      animation: eraFadeIn 0.25s ease
+      animation: eraFadeIn 0.25s ease;
     }
 
     .era-collapsible[data-collapsed="false"] .era-summary-line {
-      display: none
+      display: none;
     }
 
     @keyframes eraFadeIn {
       from {
         opacity: 0;
-        transform: translateY(-4px)
+        transform: translateY(-4px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
       }
     }
 
@@ -896,15 +932,15 @@
       background: transparent;
       border: none;
       border-left: 2px solid var(--ink-faint);
-      padding: 2px 0 2px 18px
+      padding: 2px 0 2px 18px;
     }
 
     .mini-card+.mini-card {
-      margin-top: 26px
+      margin-top: 26px;
     }
 
     .mini-card-biz+.mini-card-biz {
-      margin-top: 26px
+      margin-top: 26px;
     }
 
     .mc-role {
@@ -913,31 +949,31 @@
       letter-spacing: 0.06em;
       margin-bottom: 5px;
       display: block;
-      color: var(--ink-soft)
+      color: var(--ink-soft);
     }
 
     .mini-card .mc-role {
-      font-family: var(--mono)
+      font-family: var(--mono);
     }
 
     .mini-card-biz .mc-role {
       font-family: var(--serif);
       font-style: italic;
-      letter-spacing: 0.02em
+      letter-spacing: 0.02em;
     }
 
     .mc-title {
       font-weight: 700;
       font-size: 15px;
       margin-bottom: 3px;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .mini-card-biz .mc-title {
       font-family: var(--serif);
       font-style: italic;
       font-weight: 600;
-      font-size: 16.5px
+      font-size: 16.5px;
     }
 
     .mc-org {
@@ -946,31 +982,31 @@
       margin-bottom: 9px;
       color: var(--ink-soft);
       overflow-wrap: break-word;
-      word-break: break-word
+      word-break: break-word;
     }
 
     .mc-desc {
       font-size: 13.5px;
       color: var(--ink-soft);
-      line-height: 1.65
+      line-height: 1.65;
     }
 
     .mc-desc ul {
       list-style: none;
-      margin-top: 5px
+      margin-top: 5px;
     }
 
     .mc-desc li {
       position: relative;
       padding-left: 16px;
-      margin-bottom: 5px
+      margin-bottom: 5px;
     }
 
     .mc-desc li::before {
       content: "–";
       position: absolute;
       left: 0;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .empty-slot,
@@ -979,14 +1015,14 @@
       font-style: italic;
       font-size: 12.5px;
       color: var(--ink-faint);
-      padding: 8px 4px
+      padding: 8px 4px;
     }
 
     .achieve-box {
       margin-top: 12px;
       padding: 2px 0 2px 14px;
       border-left: 1px solid var(--line);
-      font-size: 12px
+      font-size: 12px;
     }
 
     .achieve-box b {
@@ -996,35 +1032,35 @@
       font-family: var(--mono);
       text-transform: uppercase;
       font-size: 10.5px;
-      letter-spacing: 0.05em
+      letter-spacing: 0.05em;
     }
 
     .achieve-box ul {
-      list-style: none
+      list-style: none;
     }
 
     .achieve-box li {
       padding-left: 14px;
       position: relative;
       margin-bottom: 4px;
-      color: var(--ink-soft)
+      color: var(--ink-soft);
     }
 
     .achieve-box li::before {
       content: "–";
       position: absolute;
       left: 0;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .mini-card.is-current,
     .mini-card-biz.is-current {
-      border-left: 2px solid var(--ink)
+      border-left: 2px solid var(--ink);
     }
 
     .mini-card.is-current .mc-title,
     .mini-card-biz.is-current .mc-title {
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .current-badge {
@@ -1038,21 +1074,22 @@
       padding: 2px 8px;
       border-radius: 20px;
       margin-left: 8px;
-      vertical-align: middle
+      vertical-align: middle;
     }
 
+    /* ---------- portfolio ---------- */
     .section-eyebrow-row {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 16px
+      margin-bottom: 16px;
     }
 
     .section-index {
       font-family: var(--mono);
       font-size: 11px;
       color: var(--ink-faint);
-      letter-spacing: 0.06em
+      letter-spacing: 0.06em;
     }
 
     .browser-card {
@@ -1062,14 +1099,14 @@
       overflow: hidden;
       margin-bottom: 20px;
       transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-      background: var(--paper)
+      background: var(--paper);
     }
 
     .browser-card:hover {
       transform: translateY(-3px);
       border-color: var(--ink);
       text-decoration: none;
-      box-shadow: 0 10px 24px rgba(20, 20, 20, 0.08)
+      box-shadow: 0 10px 24px rgba(20, 20, 20, 0.08);
     }
 
     .browser-chrome {
@@ -1079,42 +1116,43 @@
       padding: 9px 12px;
       background: var(--paper-alt);
       border-bottom: 1px solid var(--line);
-      min-width: 0
+      min-width: 0;
+
     }
 
     .browser-chrome .dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: var(--ink-faint)
+      background: var(--ink-faint);
     }
 
     .browser-url {
-      margin-left: 8px;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--ink-soft);
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 2px 12px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      min-width: 0;
-      flex-shrink: 1
-    }
+  margin-left: 8px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 2px 12px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  flex-shrink: 1;
+}
 
     .browser-body {
       aspect-ratio: 16 / 10;
       min-height: 220px;
       background: var(--paper-alt);
       overflow: hidden;
-      position: relative
+      position: relative;
     }
 
     .browser-card.featured .browser-body {
       aspect-ratio: 16 / 9;
-      min-height: 320px
+      min-height: 320px;
     }
 
     .browser-body::before {
@@ -1124,11 +1162,11 @@
       background: linear-gradient(90deg, var(--paper-alt) 0%, var(--line) 50%, var(--paper-alt) 100%);
       background-size: 200% 100%;
       animation: shimmer 1.4s infinite;
-      z-index: 1
+      z-index: 1;
     }
 
     .browser-body.is-loaded::before {
-      display: none
+      display: none;
     }
 
     .browser-body img {
@@ -1140,44 +1178,44 @@
       z-index: 2;
       opacity: 0;
       filter: grayscale(1) contrast(1.05);
-      transition: filter 0.4s ease, transform 0.5s ease, opacity 0.3s ease
+      transition: filter 0.4s ease, transform 0.5s ease, opacity 0.3s ease;
     }
 
     .browser-body img.is-loaded {
-      opacity: 1
+      opacity: 1;
     }
 
     .browser-card:hover .browser-body img {
       filter: grayscale(0);
-      transform: scale(1.03)
+      transform: scale(1.03);
     }
 
     @keyframes shimmer {
       0% {
-        background-position: 200% 0
+        background-position: 200% 0;
       }
 
       100% {
-        background-position: -200% 0
+        background-position: -200% 0;
       }
     }
 
     .browser-caption {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 14px 16px;
-      border-top: 1px solid var(--line);
-      min-width: 0
-    }
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  min-width: 0;
+}
 
     .browser-caption>div {
-      min-width: 0
+      min-width: 0;
     }
 
     .browser-card.featured {
-      border-color: var(--ink)
+      border-color: var(--ink);
     }
 
     .featured-tag {
@@ -1188,7 +1226,7 @@
       color: var(--paper);
       background: var(--ink);
       padding: 2px 8px;
-      border-radius: 20px
+      border-radius: 20px;
     }
 
     .doc-card {
@@ -1200,17 +1238,18 @@
       border-radius: 4px;
       margin-bottom: 12px;
       transition: transform 0.2s, border-color 0.2s;
-      min-width: 0
+      min-width: 0;
+
     }
 
     .doc-card>div {
-      min-width: 0
+      min-width: 0;
     }
 
     .doc-card:hover {
       transform: translateX(3px);
       border-color: var(--ink);
-      text-decoration: none
+      text-decoration: none;
     }
 
     .doc-icon {
@@ -1222,12 +1261,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--ink-soft)
+      color: var(--ink-soft);
     }
 
     .doc-icon svg {
       width: 16px;
-      height: 16px
+      height: 16px;
     }
 
     .art-status {
@@ -1236,7 +1275,7 @@
       letter-spacing: 0.06em;
       display: block;
       margin-bottom: 5px;
-      color: var(--ink-soft)
+      color: var(--ink-soft);
     }
 
     .art-name {
@@ -1246,30 +1285,33 @@
       margin-bottom: 2px;
       color: var(--ink);
       overflow-wrap: break-word;
-      word-break: break-word
+      word-break: break-word;
     }
 
     .side-biz .art-name {
       font-family: var(--serif);
       font-style: italic;
-      font-size: 15.5px
+      font-size: 15.5px;
     }
 
     .art-desc {
       font-size: 12px;
       color: var(--ink-soft);
       overflow-wrap: break-word;
-      word-break: break-word
+      word-break: break-word;
     }
 
+    /* ---------- neutral sections ---------- */
     .neutral {
-      background: linear-gradient(rgba(246, 244, 239, 0.85), rgba(246, 244, 239, 0.85)), url('almost.jpg') center 40%/cover no-repeat;
+      background:
+        linear-gradient(rgba(246, 244, 239, 0.85), rgba(246, 244, 239, 0.85)),
+        url('almost.jpg') center 40%/cover no-repeat;
       padding: 88px 0;
-      border-top: 1px solid var(--line)
+      border-top: 1px solid var(--line);
     }
 
     .neutral .wrap {
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .neutral .section-head {
@@ -1277,7 +1319,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 32px
+      margin-bottom: 32px;
     }
 
     .section-tag {
@@ -1289,7 +1331,7 @@
       background: var(--paper);
       border: 1px solid var(--line);
       padding: 4px 10px;
-      border-radius: 2px
+      border-radius: 2px;
     }
 
     .neutral h2 {
@@ -1297,44 +1339,45 @@
       font-size: 23px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.01em
+      letter-spacing: 0.01em;
     }
 
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px
+      gap: 24px;
     }
 
     @media (max-width:700px) {
       .two-col {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
     }
 
+    /* ---------- work history: same years, two lives ---------- */
     .worklife-split {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       gap: 44px;
-      align-items: start
+      align-items: start;
     }
 
     @media (max-width:820px) {
       .worklife-split {
         grid-template-columns: 1fr;
-        gap: 36px
+        gap: 36px;
       }
     }
 
     .worklife-divider {
       width: 1px;
       align-self: stretch;
-      background: var(--line)
+      background: var(--line);
     }
 
     @media (max-width:820px) {
       .worklife-divider {
-        display: none
+        display: none;
       }
     }
 
@@ -1345,17 +1388,17 @@
       text-transform: uppercase;
       color: var(--ink-soft);
       margin-bottom: 24px;
-      display: block
+      display: block;
     }
 
     .worklife-item {
       position: relative;
       padding-left: 20px;
-      border-left: 1px solid var(--line)
+      border-left: 1px solid var(--line);
     }
 
     .worklife-item+.worklife-item {
-      margin-top: 28px
+      margin-top: 28px;
     }
 
     .worklife-item::before {
@@ -1366,7 +1409,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--ink)
+      background: var(--ink);
     }
 
     .worklife-year {
@@ -1375,7 +1418,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--ink-soft);
-      margin-bottom: 8px
+      margin-bottom: 8px;
     }
 
     .worklife-item h3 {
@@ -1383,13 +1426,13 @@
       font-weight: 700;
       font-size: 15.5px;
       color: var(--ink);
-      margin-bottom: 6px
+      margin-bottom: 6px;
     }
 
     .worklife-item p {
       font-size: 13.5px;
       color: var(--ink-soft);
-      line-height: 1.65
+      line-height: 1.65;
     }
 
     .worklife-item .sub {
@@ -1397,12 +1440,12 @@
       font-size: 12.5px;
       font-family: var(--mono);
       display: block;
-      margin-top: 2px
+      margin-top: 2px;
     }
 
     .worklife-item ul {
       list-style: none;
-      margin-top: 4px
+      margin-top: 4px;
     }
 
     .worklife-item li {
@@ -1411,21 +1454,21 @@
       margin-bottom: 9px;
       font-size: 13.5px;
       color: var(--ink-soft);
-      line-height: 1.5
+      line-height: 1.5;
     }
 
     .worklife-item li::before {
       content: "–";
       position: absolute;
       left: 0;
-      color: var(--ink)
+      color: var(--ink);
     }
 
     #profile,
     #timeline,
     #work,
     #contact {
-      scroll-margin-top: 90px
+      scroll-margin-top: 90px;
     }
 
     footer {
@@ -1433,7 +1476,7 @@
       background: var(--paper);
       border-top: 1px solid var(--line);
       padding: 70px 0 60px;
-      overflow: hidden
+      overflow: hidden;
     }
 
     footer::before {
@@ -1442,11 +1485,11 @@
       inset: 0;
       background-image: repeating-linear-gradient(135deg, var(--line) 0, var(--line) 1px, transparent 1px, transparent 28px);
       opacity: 0.5;
-      pointer-events: none
+      pointer-events: none;
     }
 
     footer .wrap {
-      position: relative
+      position: relative;
     }
 
     .footer-tagline {
@@ -1457,14 +1500,14 @@
       color: var(--ink);
       max-width: 560px;
       margin-bottom: 44px;
-      line-height: 1.5
+      line-height: 1.5;
     }
 
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 26px 42px;
-      font-size: 14px
+      font-size: 14px;
     }
 
     .contact-item .k {
@@ -1473,54 +1516,86 @@
       font-size: 10.5px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      margin-bottom: 6px
+      margin-bottom: 6px;
     }
 
     .contact-item .v {
-      color: var(--ink)
+      color: var(--ink);
     }
 
     .contact-item .v a {
       color: var(--ink);
-      border-bottom: 1px solid var(--ink)
+      border-bottom: 1px solid var(--ink);
     }
 
     .footer-line {
       height: 1px;
       background: var(--line);
-      margin-bottom: 48px
+      margin-bottom: 48px;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-brand">A.R.P.D</div>
-    <div class="nav-links"><a href="#profile" data-nav="profile">Profile</a><a href="#timeline"
-        data-nav="timeline">Timeline</a><a href="#work" data-nav="work">Work</a><a href="#contact"
-        data-nav="contact">Contact</a></div><a href="#contact" class="nav-cta">Get in Touch</a><button
-      class="nav-burger" id="navBurger" aria-label="Toggle menu"
-      aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <div class="nav-links">
+      <a href="#profile" data-nav="profile">Profile</a>
+      <a href="#timeline" data-nav="timeline">Timeline</a>
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
-  <div class="mobile-menu" id="mobileMenu"><a href="#profile" data-nav="profile">Profile</a><a href="#timeline"
-      data-nav="timeline">Timeline</a><a href="#work" data-nav="work">Work</a><a href="#contact"
-      data-nav="contact">Contact</a><a href="#contact" class="mobile-menu-cta">Get in Touch</a></div>
-  <div class="hero-photo" id="heroPhoto"><img class="hero-photo-img" id="heroPhotoImg"
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#profile" data-nav="profile">Profile</a>
+    <a href="#timeline" data-nav="timeline">Timeline</a>
+    <a href="#work" data-nav="work">Work</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+    <a href="#contact" class="mobile-menu-cta">Get in Touch</a>
+  </div>
+
+  <!-- HERO PHOTO: real photo, forced grayscale, static (no parallax) -->
+  <div class="hero-photo" id="heroPhoto">
+    <img class="hero-photo-img" id="heroPhotoImg"
       src="https://images.unsplash.com/photo-1647891952862-62e749234547?fm=jpg&q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.1.0"
       alt="Plane flying above a sea of clouds over misty mountains" loading="eager">
     <div class="hero-photo-scrim"></div>
-    <div class="hero-overlay"><span class="hero-eyebrow">// two tracks. one person.</span>
+
+    <div class="hero-overlay">
+      <span class="hero-eyebrow">// two tracks. one person.</span>
       <div class="hero-name">Aghasy Rezandi<br>Pratama Dewanata</div>
       <div class="hero-role">QA specialist by trade, builder &amp; entrepreneur by choice.</div>
-      <div class="hero-tags"><span class="tag-tech">QA Tester &amp; Product Builder</span><span
-          class="tag-dot"></span><span class="tag-biz">Entrepreneur</span></div>
+      <div class="hero-tags">
+        <span class="tag-tech">QA Tester &amp; Product Builder</span>
+        <span class="tag-dot"></span>
+        <span class="tag-biz">Entrepreneur</span>
+      </div>
     </div>
-    <div class="hero-scroll-cue"><span class="stem"></span> scroll </div>
-    <div class="hero-photo-credit"> Photo by <a href="https://unsplash.com/@damiendufourphotographie" target="_blank"
-        rel="noopener">damien dufour</a> on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
+
+    <div class="hero-scroll-cue">
+      <span class="stem"></span>
+      scroll
+    </div>
+
+    <div class="hero-photo-credit">
+      Photo by <a href="https://unsplash.com/@damiendufourphotographie" target="_blank" rel="noopener">damien dufour</a>
+      on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
     </div>
   </div>
+
   <div class="page-content">
+
     <div class="stat-strip-band">
       <div class="stat-strip">
         <div class="stat-item">
@@ -1558,50 +1633,72 @@
         </div>
       </div>
     </div>
+
+    <!-- PROFILE SUMMARY -->
     <div id="profile" class="halves">
-      <div class="side-tech side-pad"><span class="eyebrow">// QA &amp; Testing</span>
+      <div class="side-tech side-pad">
+        <span class="eyebrow">// QA &amp; Testing</span>
         <h2>Manual Test Discipline</h2>
         <p class="summary-text">Spent years testing mobile games at Gameloft. Titles like Asphalt 9, Disney Magic
-          Kingdom, Pastry, Ice Age Village, and The Blacklist passed through my hands before they shipped. Got trusted
-          with Ads Testing along the way and moved up to Junior 2.</p>
+          Kingdom,
+          Pastry, Ice Age Village, and The Blacklist passed through my hands before they shipped. Got trusted with Ads
+          Testing along the way and moved up to Junior 2.</p>
         <p class="summary-text">Since 2023, freelancing as a Software QA Tester across Testbirds, Test IO, Tester Work,
           and uTest. Picked up a few "Tester of the Week" wins and rated-tester badges here and there.</p>
       </div>
-      <div class="side-biz side-pad"><span class="eyebrow">✦ Building &amp; Business</span>
+      <div class="side-biz side-pad">
+        <span class="eyebrow">✦ Building &amp; Business</span>
         <h2>From Honey to Code</h2>
         <p class="summary-text">Running Sabrina Honey since 2019, sourcing raw honey straight from local beekeepers and
           packing it for resellers and retail shelves. Before that, tried my hand at herbal retail, bookstore marketing,
           and even ran a small restaurant for a while.</p>
         <p class="summary-text">In 2025 started building my own products using AI-assisted development ("vibe coding"):
-          a POS system for UMKM, a Flutter Qur'an app, an Umrah companion app, and a few client websites. Learned
+          a
+          POS system for UMKM, a Flutter Qur'an app, an Umrah companion app, and a few client websites. Learned
           architecture, deployment, and Supabase mostly by just doing it.</p>
       </div>
     </div>
+
     <div class="objective-section">
-      <div class="objective-bar"><span class="quote-mark">&#8220;</span> "Looking for the next opportunity to grow
-        further in software testing and AI-assisted product development, happy to jump into projects that actually
-        matter to the people using them. Open to any kind of work, really, as long as it helps the company, stays within
-        what's agreed with no exploitation, and lets me pick up new skills along the way." </div>
+      <div class="objective-bar">
+        <span class="quote-mark">&#8220;</span>
+        "Looking for the next opportunity to grow further in software testing and AI-assisted product development, happy
+        to
+        jump into projects that actually matter to the people using them. Open to any kind of work, really, as long as
+        it
+        helps the company, stays within what's agreed with no exploitation, and lets me pick up new skills along the
+        way."
+      </div>
     </div>
+
+    <!-- SKILLS -->
     <div class="halves">
-      <div class="side-tech side-pad"><span class="eyebrow">coverage</span>
+      <div class="side-tech side-pad">
+        <span class="eyebrow">coverage</span>
         <h2>Technical &amp; QA Coverage</h2>
         <div id="cov-tech"></div>
       </div>
-      <div class="side-biz side-pad"><span class="eyebrow">strengths</span>
+      <div class="side-biz side-pad">
+        <span class="eyebrow">strengths</span>
         <h2>Collaboration &amp; Drive</h2>
         <div id="cov-biz"></div>
       </div>
     </div>
-    <div id="timeline" class="timeline-head"><span class="eyebrow">03 · the spine</span>
+
+    <!-- TIMELINE (SIGNATURE) -->
+    <div id="timeline" class="timeline-head">
+      <span class="eyebrow">03 · the spine</span>
       <h2>Work History, Same Years Two Lives</h2>
       <p>left: QA &amp; technical track · right: business &amp; ventures track</p>
     </div>
+
     <div class="timeline">
+
+      <!-- ERA: 2026 present -->
       <div class="era">
         <div class="era-tech">
-          <div class="mini-card is-current"><span class="mc-role">Current · Full-time<span
-                class="current-badge">Now</span></span>
+          <div class="mini-card is-current">
+            <span class="mc-role">Current · Full-time<span class="current-badge">Now</span></span>
             <div class="mc-title">Web Developer</div>
             <div class="mc-org">Nusabit · Jan 2026 – Present · Indonesia · Remote</div>
             <div class="mc-desc">Building and shipping web products, bringing the same black-box testing habits and
@@ -1613,22 +1710,28 @@
           <div class="era-year">2026<br>Present</div>
         </div>
         <div class="era-biz">
-          <div class="mini-card-biz is-current"><span class="mc-role">Ongoing · Self-employed<span
-                class="current-badge">Now</span></span>
+          <div class="mini-card-biz is-current">
+            <span class="mc-role">Ongoing · Self-employed<span class="current-badge">Now</span></span>
             <div class="mc-title">Business Owner</div>
             <div class="mc-org">Sabrina Honey · Feb 2019 – Present · Yogyakarta · On-site</div>
             <div class="mc-desc">Sources raw honey directly from local beekeepers, then packs it into 1kg, 500g, 330g,
-              and 180g sizes for resellers and retail shelves.</div>
+              and
+              180g sizes for resellers and retail shelves.</div>
           </div>
         </div>
       </div>
+
+      <!-- ERA: 2023-2026 freelance QA -->
       <div class="era">
         <div class="era-tech">
-          <div class="mini-card"><span class="mc-role">Freelance</span>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
             <div class="mc-title">Software QA Tester</div>
             <div class="mc-org">uTest · Jan 2024 – Feb 2026 · Indonesia · Remote</div>
             <div class="mc-desc">Worked test cases as provided, and a fair bit of exploratory testing, different teams,
-              TTLs, and TEs on each project. <div class="achieve-box"><b>uTest achievements</b>
+              TTLs, and TEs on each project.
+              <div class="achieve-box">
+                <b>uTest achievements</b>
                 <ul>
                   <li>Academy Tester of the Week (All Star &amp; Challenge Cycle)</li>
                   <li>Silver, Bronze, Proven &amp; Rated Tester badges</li>
@@ -1636,22 +1739,26 @@
               </div>
             </div>
           </div>
-          <div class="mini-card"><span class="mc-role">Freelance</span>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
             <div class="mc-title">Software QA Tester</div>
             <div class="mc-org">Test IO · Nov 2023 – Feb 2026 · Yogyakarta, Indonesia · Remote</div>
             <div class="mc-desc">Manual &amp; exploratory test execution across concurrent client projects.</div>
           </div>
-          <div class="mini-card"><span class="mc-role">Freelance</span>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
             <div class="mc-title">Software QA Tester</div>
             <div class="mc-org">Testbirds · Dec 2023 – Present · Indonesia · Remote</div>
             <div class="mc-desc">QA and test execution across various client projects.</div>
           </div>
-          <div class="mini-card"><span class="mc-role">Freelance</span>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
             <div class="mc-title">Software QA Tester</div>
             <div class="mc-org">Tester Work · 2023 – Present · Remote</div>
             <div class="mc-desc">Manual and software testing across client engagements.</div>
           </div>
-          <div class="mini-card"><span class="mc-role">Freelance</span>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
             <div class="mc-title">Software QA Tester</div>
             <div class="mc-org">Sorjati · Feb 2025 – May 2025 · Sewon, Yogyakarta · Remote</div>
             <div class="mc-desc">Tested warehouse, procurement, and sales software for a goat meat business. Day to day
@@ -1666,45 +1773,56 @@
           <div class="empty-slot-biz">Sabrina Honey continues running in the background.</div>
         </div>
       </div>
+
+      <!-- ERA: 2019-2023 career break / ventures -->
       <div class="era era-collapsible" data-collapsed="true">
         <div class="era-tech">
           <div class="empty-slot">Career break from QA testing.</div>
         </div>
         <div class="era-spine">
           <div class="era-dot"></div>
-          <div class="era-year">2019–23<br>Ventures</div><button class="era-toggle" aria-expanded="false"
-            aria-label="Toggle era details"><span class="era-toggle-icon">+</span></button>
+          <div class="era-year">2019–23<br>Ventures</div>
+          <button class="era-toggle" aria-expanded="false" aria-label="Toggle era details">
+            <span class="era-toggle-icon">+</span>
+          </button>
         </div>
         <div class="era-biz">
           <div class="era-summary-line">6 roles · culinary, herbal retail, online marketing &amp; more →</div>
           <div class="era-detail">
-            <div class="mini-card-biz"><span class="mc-role">Career break</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Career break</span>
               <div class="mc-title">Personal Goal Pursuit</div>
               <div class="mc-org">Oct 2019 – Dec 2023 · Yogyakarta</div>
               <div class="mc-desc">Tried a bit of everything (culinary, selling herbs, books, dates) before landing on
-                raw honey.</div>
+                raw
+                honey.</div>
             </div>
-            <div class="mini-card-biz"><span class="mc-role">Full-time</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Full-time</span>
               <div class="mc-title">Online Shop Admin Specialist</div>
               <div class="mc-org">Herbamart · Sep 2021 – May 2022 · Yogyakarta</div>
               <div class="mc-desc">Online shop operations &amp; marketplace presence.</div>
             </div>
-            <div class="mini-card-biz"><span class="mc-role">Full-time</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Full-time</span>
               <div class="mc-title">Online Marketing Specialist</div>
               <div class="mc-org">Luqman Herbal · Feb 2021 – Sep 2021 · Yogyakarta</div>
               <div class="mc-desc">Online marketing &amp; content with Adobe Spark.</div>
             </div>
-            <div class="mini-card-biz"><span class="mc-role">Full-time</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Full-time</span>
               <div class="mc-title">Marketing Advertising Specialist</div>
               <div class="mc-org">AHC Sunnah Bookstore · Sep 2020 – Mar 2021 · Yogyakarta</div>
               <div class="mc-desc">Marketing &amp; advertising initiatives.</div>
             </div>
-            <div class="mini-card-biz"><span class="mc-role">Part-time</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Part-time</span>
               <div class="mc-title">Onlineshop Market Admin</div>
               <div class="mc-org">Garasi Herbal · Aug 2020 – Sep 2020 · Yogyakarta</div>
               <div class="mc-desc">Night-shift data entry &amp; marketplace admin.</div>
             </div>
-            <div class="mini-card-biz"><span class="mc-role">Self-employed</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Self-employed</span>
               <div class="mc-title">Restaurant Owner</div>
               <div class="mc-org">Kedai Pi7oe · Oct 2019 – Apr 2020 · Yogyakarta</div>
               <div class="mc-desc">Ran independently until pausing for the COVID-19 pandemic.</div>
@@ -1712,14 +1830,18 @@
           </div>
         </div>
       </div>
+
+      <!-- ERA: 2015-2019 Game QA -->
       <div class="era">
         <div class="era-tech">
-          <div class="mini-card"><span class="mc-role">Full-time · On-site</span>
+          <div class="mini-card">
+            <span class="mc-role">Full-time · On-site</span>
             <div class="mc-title">QA Engineer / QA Specialist</div>
             <div class="mc-org">WHAT (games) · May 2018 – Oct 2019</div>
             <div class="mc-desc">Tested games for the WHAT (GAMES) team; concurrent QA Specialist scope.</div>
           </div>
-          <div class="mini-card"><span class="mc-role">Full-time</span>
+          <div class="mini-card">
+            <span class="mc-role">Full-time</span>
             <div class="mc-title">QA Tester</div>
             <div class="mc-org">Gameloft · Apr 2015 – Oct 2019</div>
             <div class="mc-desc">
@@ -1739,19 +1861,24 @@
           <div class="empty-slot-biz">No ventures on record for this period.</div>
         </div>
       </div>
+
+      <!-- ERA: 2009-2015 -->
       <div class="era era-collapsible" data-collapsed="true">
         <div class="era-tech">
           <div class="empty-slot">Pre-QA career.</div>
         </div>
         <div class="era-spine">
           <div class="era-dot"></div>
-          <div class="era-year">2009–15<br>Origins</div><button class="era-toggle" aria-expanded="false"
-            aria-label="Toggle era details"><span class="era-toggle-icon">+</span></button>
+          <div class="era-year">2009–15<br>Origins</div>
+          <button class="era-toggle" aria-expanded="false" aria-label="Toggle era details">
+            <span class="era-toggle-icon">+</span>
+          </button>
         </div>
         <div class="era-biz">
           <div class="era-summary-line">1 role · customer service &amp; early beginnings →</div>
           <div class="era-detail">
-            <div class="mini-card-biz"><span class="mc-role">Part-time · On-site</span>
+            <div class="mini-card-biz">
+              <span class="mc-role">Part-time · On-site</span>
               <div class="mc-title">Customer Service Staff</div>
               <div class="mc-org">Bimasakti Disc House · Apr 2009 – Mar 2015 · Sleman, Yogyakarta</div>
               <div class="mc-desc">Customer service, data entry, stock control; also sourced and screened candidates for
@@ -1760,90 +1887,140 @@
           </div>
         </div>
       </div>
+
     </div>
+
+    <!-- PORTFOLIO -->
     <div id="work" class="halves">
       <div class="side-tech side-pad">
         <div class="section-eyebrow-row"><span class="section-index">04</span><span class="eyebrow"
             style="margin-bottom:0;">artifacts/</span></div>
         <h2>Tech Builds</h2>
-        <div class="artifact-list"><a class="browser-card featured" href="https://nusapos.vercel.app" target="_blank"
-            rel="noopener">
-            <div class="browser-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="browser-url">nusapos.vercel.app</span></div>
-            <div class="browser-body"><img src="pos.jpg" alt="NusaPOS point-of-sale interface screenshot"
-                loading="lazy"></div>
-            <div class="browser-caption">
-              <div><span class="art-status">● LIVE &nbsp; Featured Project</span><span
-                  class="art-name">NusaPOS</span><span class="art-desc">Point-of-sale system built for UMKM
-                  sellers</span></div><span class="featured-tag">Featured</span>
+        <div class="artifact-list">
+
+          <a class="browser-card featured" href="https://nusapos.vercel.app" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">nusapos.vercel.app</span>
             </div>
-          </a><a class="doc-card"
-            href="https://docs.google.com/presentation/d/1Wo4lvuK2VQncTzygwrqDLb3xXKmRBwZm5bK18zRoP1E" target="_blank"
-            rel="noopener"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.6">
+            <div class="browser-body">
+              <img src="pos.jpg" alt="NusaPOS point-of-sale interface screenshot" loading="lazy">
+            </div>
+            <div class="browser-caption">
+              <div>
+                <span class="art-status">● LIVE &nbsp; Featured Project</span>
+                <span class="art-name">NusaPOS</span>
+                <span class="art-desc">Point-of-sale system built for UMKM sellers</span>
+              </div>
+              <span class="featured-tag">Featured</span>
+            </div>
+          </a>
+
+          <a class="doc-card" href="https://docs.google.com/presentation/d/1Wo4lvuK2VQncTzygwrqDLb3xXKmRBwZm5bK18zRoP1E"
+            target="_blank" rel="noopener">
+            <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <rect x="3" y="5" width="18" height="12" rx="1" />
                 <line x1="8" y1="21" x2="16" y2="21" />
                 <line x1="12" y1="17" x2="12" y2="21" />
               </svg></span>
-            <div><span class="art-status">● DECK</span><span class="art-name">QA Portfolio Deck</span><span
-                class="art-desc">Tap to open presentation</span></div>
-          </a><a class="doc-card" href="https://github.com/Ageha-Ze" target="_blank" rel="noopener"><span
-              class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <div>
+              <span class="art-status">● DECK</span>
+              <span class="art-name">QA Portfolio Deck</span>
+              <span class="art-desc">Tap to open presentation</span>
+            </div>
+          </a>
+          <a class="doc-card" href="https://github.com/Ageha-Ze" target="_blank" rel="noopener">
+            <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path
                   d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
               </svg></span>
-            <div><span class="art-status">● REPO</span><span class="art-name">github.com/Ageha-Ze</span><span
-                class="art-desc">Source code &amp; projects</span></div>
-          </a></div>
+            <div>
+              <span class="art-status">● REPO</span>
+              <span class="art-name">github.com/Ageha-Ze</span>
+              <span class="art-desc">Source code &amp; projects</span>
+            </div>
+          </a>
+        </div>
       </div>
       <div class="side-biz side-pad">
         <div class="section-eyebrow-row"><span class="section-index">·</span><span class="eyebrow"
             style="margin-bottom:0;">✦ storefronts</span></div>
         <h2>Business &amp; Client Sites</h2>
-        <div class="artifact-list"><a class="browser-card featured" href="https://madusabrina.vercel.app"
-            target="_blank" rel="noopener">
-            <div class="browser-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="browser-url">madusabrina.vercel.app</span></div>
-            <div class="browser-body"><img src="honey.jpg" alt="Sabrina Honey homepage screenshot" loading="lazy"></div>
-            <div class="browser-caption">
-              <div><span class="art-status">● LIVE</span><span class="art-name">Sabrina Honey</span><span
-                  class="art-desc">Storefront for the family honey business</span></div>
+        <div class="artifact-list">
+
+          <a class="browser-card featured" href="https://madusabrina.vercel.app" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">madusabrina.vercel.app</span>
             </div>
-          </a><a class="browser-card" href="https://pie-nana.vercel.app/" target="_blank" rel="noopener">
-            <div class="browser-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="browser-url">pie-nana.vercel.app</span></div>
-            <div class="browser-body"><img src="pie.jpg" alt="Pie Nana product menu screenshot" loading="lazy"></div>
-            <div class="browser-caption">
-              <div><span class="art-status">● LIVE</span><span class="art-name">Pie Nana</span><span
-                  class="art-desc">Client brand website</span></div>
-            </div>
-          </a><a class="browser-card" href="https://rihlahsakinah.vercel.app" target="_blank" rel="noopener">
-            <div class="browser-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
-                class="browser-url">rihlahsakinah.vercel.app</span></div>
-            <div class="browser-body"><img src="rihlah.jpg" alt="Rihlah Sakinah homepage screenshot" loading="lazy">
+            <div class="browser-body">
+              <img src="honey.jpg" alt="Sabrina Honey homepage screenshot" loading="lazy">
             </div>
             <div class="browser-caption">
-              <div><span class="art-status">● LIVE</span><span class="art-name">Rihlah Sakinah</span><span
-                  class="art-desc">Umrah &amp; Hajj travel agency website</span></div>
+              <div>
+                <span class="art-status">● LIVE</span>
+                <span class="art-name">Sabrina Honey</span>
+                <span class="art-desc">Storefront for the family honey business</span>
+              </div>
             </div>
-          </a></div>
+          </a>
+
+          <a class="browser-card" href="https://pie-nana.vercel.app/" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">pie-nana.vercel.app</span>
+            </div>
+            <div class="browser-body">
+              <img src="pie.jpg" alt="Pie Nana product menu screenshot" loading="lazy">
+            </div>
+            <div class="browser-caption">
+              <div>
+                <span class="art-status">● LIVE</span>
+                <span class="art-name">Pie Nana</span>
+                <span class="art-desc">Client brand website</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="browser-card" href="https://rihlahsakinah.vercel.app" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">rihlahsakinah.vercel.app</span>
+            </div>
+            <div class="browser-body">
+              <img src="rihlah.jpg" alt="Rihlah Sakinah homepage screenshot" loading="lazy">
+            </div>
+            <div class="browser-caption">
+              <div>
+                <span class="art-status">● LIVE</span>
+                <span class="art-name">Rihlah Sakinah</span>
+                <span class="art-desc">Umrah &amp; Hajj travel agency website</span>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
+
+    <!-- WORK HISTORY: SAME YEARS, TWO LIVES (personal touch) -->
     <div class="neutral">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">05 · beyond the desk</span>
+        <div class="section-head">
+          <span class="eyebrow">05 · beyond the desk</span>
           <h2>Work History, Same Years, Two Lives</h2>
         </div>
         <p
           style="font-family:var(--serif); font-style:italic; color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:40px;">
           Two tracks looks tidy on paper. Here's what was running alongside it, the same years, the whole time.</p>
         <div class="worklife-split">
-          <div class="worklife-col"><span class="worklife-col-label">Track 01 : On the record</span>
+          <div class="worklife-col">
+            <span class="worklife-col-label">Track 01 : On the record</span>
             <div class="worklife-item">
               <div class="worklife-year">2009 – 2015</div>
               <h3>Education</h3>
-              <p><strong>Bachelor Degree / S1, Informatics Engineering</strong><span class="sub">UPN "Veteran"
-                  Yogyakarta</span></p>
+              <p><strong>Bachelor Degree / S1, Informatics Engineering</strong>
+                <span class="sub">UPN "Veteran" Yogyakarta</span>
+              </p>
             </div>
             <div class="worklife-item">
               <div class="worklife-year">Ongoing</div>
@@ -1853,7 +2030,8 @@
             </div>
           </div>
           <div class="worklife-divider"></div>
-          <div class="worklife-col"><span class="worklife-col-label">Track 02 : Off the record</span>
+          <div class="worklife-col">
+            <span class="worklife-col-label">Track 02 : Off the record</span>
             <div class="worklife-item">
               <div class="worklife-year">Ongoing</div>
               <h3>Outside Work</h3>
@@ -1867,12 +2045,14 @@
         </div>
       </div>
     </div>
+
     <footer id="contact">
       <div class="wrap">
         <div class="footer-line"></div>
         <p class="footer-tagline">"Currently building products that solve real problems, one test case and one jar of
           honey at a time."</p>
-        <div class="section-head" style="margin-bottom:20px;"><span class="eyebrow">06 · contact</span>
+        <div class="section-head" style="margin-bottom:20px;">
+          <span class="eyebrow">06 · contact</span>
           <h2>Get in Touch</h2>
         </div>
         <div class="contact-grid">
@@ -1896,8 +2076,121 @@
         </div>
       </div>
     </footer>
-  </div>
-  <script>const techSkills = [{ name: "Test Implementation", pct: 90 }, { name: "Manual Test Case", pct: 90 }, { name: "Defect Monitoring", pct: 80 }, { name: "AI-Assisted Development", pct: 70 }, { name: "Deployment (Vercel, HostingCeria)", pct: 60 }, { name: "Supabase (BaaS)", pct: 60 },]; const bizSkills = [{ name: "Self Motivated", pct: 90 }, { name: "Teamwork & Collaboration", pct: 80 }, { name: "Written Communication", pct: 70 },]; function renderCoverage(containerId, skills, isBiz) { const el = document.getElementById(containerId); skills.forEach(s => { const item = document.createElement('div'); item.className = 'cov-item'; item.innerHTML = ` <div class="cov-label"><span>${s.name}</span><span class="pct">${s.pct}%</span></div><div class="cov-track"><div class="cov-fill" data-pct="${s.pct}"></div></div> `; el.appendChild(item); }); } renderCoverage('cov-tech', techSkills, false); renderCoverage('cov-biz', bizSkills, true); const bars = document.querySelectorAll('.cov-fill'); const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.width = entry.target.dataset.pct + '%'; observer.unobserve(entry.target); } }); }, { threshold: 0.3 }); bars.forEach(b => observer.observe(b)); const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-menu a[data-nav]'); const sections = ['profile', 'timeline', 'work', 'contact'].map(id => document.getElementById(id)).filter(Boolean); const navObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const id = entry.target.id; allNavLinks.forEach(link => { link.classList.toggle('active', link.dataset.nav === id); }); } }); }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 }); sections.forEach(sec => navObserver.observe(sec)); document.querySelectorAll('.era-toggle').forEach(btn => { btn.addEventListener('click', () => { const era = btn.closest('.era-collapsible'); const isCollapsed = era.dataset.collapsed !== 'false'; era.dataset.collapsed = String(!isCollapsed); btn.setAttribute('aria-expanded', String(isCollapsed)); }); }); document.querySelectorAll('.era-summary-line').forEach(line => { line.addEventListener('click', () => { const era = line.closest('.era-collapsible'); era.dataset.collapsed = 'false'; era.querySelector('.era-toggle')?.setAttribute('aria-expanded', 'true'); }); }); document.querySelectorAll('.browser-body img').forEach(img => { const markLoaded = () => { img.classList.add('is-loaded'); img.closest('.browser-body')?.classList.add('is-loaded'); }; if (img.complete && img.naturalWidth > 0) { markLoaded(); } else { img.addEventListener('load', markLoaded); img.addEventListener('error', () => img.closest('.browser-body')?.classList.add('is-loaded')); } }); const navBurger = document.getElementById('navBurger'); const mobileMenu = document.getElementById('mobileMenu'); function toggleMobileMenu(forceClose = false) { const isOpen = mobileMenu.classList.contains('is-open'); const shouldOpen = forceClose ? false : !isOpen; mobileMenu.classList.toggle('is-open', shouldOpen); navBurger.setAttribute('aria-expanded', String(shouldOpen)); document.body.classList.toggle('menu-open', shouldOpen); } navBurger.addEventListener('click', () => toggleMobileMenu()); mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => toggleMobileMenu(true)); });</script>
+
+  </div><!-- /.page-content -->
+
+  <script>
+    const techSkills = [
+      { name: "Test Implementation", pct: 90 },
+      { name: "Manual Test Case", pct: 90 },
+      { name: "Defect Monitoring", pct: 80 },
+      { name: "AI-Assisted Development", pct: 70 },
+      { name: "Deployment (Vercel, HostingCeria)", pct: 60 },
+      { name: "Supabase (BaaS)", pct: 60 },
+    ];
+    const bizSkills = [
+      { name: "Self Motivated", pct: 90 },
+      { name: "Teamwork & Collaboration", pct: 80 },
+      { name: "Written Communication", pct: 70 },
+    ];
+
+    function renderCoverage(containerId, skills, isBiz) {
+      const el = document.getElementById(containerId);
+      skills.forEach(s => {
+        const item = document.createElement('div');
+        item.className = 'cov-item';
+        item.innerHTML = `
+        <div class="cov-label"><span>${s.name}</span><span class="pct">${s.pct}%</span></div>
+        <div class="cov-track"><div class="cov-fill" data-pct="${s.pct}"></div></div>
+      `;
+        el.appendChild(item);
+      });
+    }
+    renderCoverage('cov-tech', techSkills, false);
+    renderCoverage('cov-biz', bizSkills, true);
+
+    const bars = document.querySelectorAll('.cov-fill');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.dataset.pct + '%';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    bars.forEach(b => observer.observe(b));
+
+    // scroll-spy for nav
+    const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-menu a[data-nav]');
+    const sections = ['profile', 'timeline', 'work', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          allNavLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.nav === id);
+          });
+        }
+      });
+    }, {
+      rootMargin: '-40% 0px -55% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(sec => navObserver.observe(sec));
+
+    document.querySelectorAll('.era-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const era = btn.closest('.era-collapsible');
+        const isCollapsed = era.dataset.collapsed !== 'false';
+        era.dataset.collapsed = String(!isCollapsed);
+        btn.setAttribute('aria-expanded', String(isCollapsed));
+      });
+    });
+
+    document.querySelectorAll('.era-summary-line').forEach(line => {
+      line.addEventListener('click', () => {
+        const era = line.closest('.era-collapsible');
+        era.dataset.collapsed = 'false';
+        era.querySelector('.era-toggle')?.setAttribute('aria-expanded', 'true');
+      });
+    });
+
+    document.querySelectorAll('.browser-body img').forEach(img => {
+      const markLoaded = () => {
+        img.classList.add('is-loaded');
+        img.closest('.browser-body')?.classList.add('is-loaded');
+      };
+      if (img.complete && img.naturalWidth > 0) {
+        markLoaded();
+      } else {
+        img.addEventListener('load', markLoaded);
+        img.addEventListener('error', () => img.closest('.browser-body')?.classList.add('is-loaded'));
+      }
+    });
+
+    const navBurger = document.getElementById('navBurger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMobileMenu(forceClose = false) {
+      const isOpen = mobileMenu.classList.contains('is-open');
+      const shouldOpen = forceClose ? false : !isOpen;
+
+      mobileMenu.classList.toggle('is-open', shouldOpen);
+      navBurger.setAttribute('aria-expanded', String(shouldOpen));
+      document.body.classList.toggle('menu-open', shouldOpen);
+    }
+
+    navBurger.addEventListener('click', () => toggleMobileMenu());
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => toggleMobileMenu(true));
+    });
+  </script>
+
 </body>
 
 </html>
