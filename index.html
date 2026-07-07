@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Aghasy Rezandi Pratama Dewanata · Two Tracks, One Career</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap');
@@ -29,6 +30,8 @@
 
     html {
       scroll-behavior: smooth;
+        overflow-x: hidden;
+
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -77,91 +80,91 @@
       padding: 0 20px;
     }
 
-/* ---------- nav ---------- */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 32px;
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
-}
+    /* ---------- nav ---------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 32px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
 
-.nav-brand {
-  font-family: var(--sans);
-  font-weight: 900;
-  font-size: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
+    .nav-brand {
+      font-family: var(--sans);
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
 
-.nav-links a {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  padding-bottom: 4px;
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
+    .nav-links a {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
 
-.nav-links a.active {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-}
+    .nav-links a.active {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
 
-.nav-links a:hover {
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom-color: var(--ink);
-}
+    .nav-links a:hover {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom-color: var(--ink);
+    }
 
-.nav-cta {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ink);
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--ink);
-  transition: opacity 0.2s;
-}
+    .nav-cta {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--ink);
+      transition: opacity 0.2s;
+    }
 
-.nav-cta:hover {
-  opacity: 0.6;
-  text-decoration: none;
-}
+    .nav-cta:hover {
+      opacity: 0.6;
+      text-decoration: none;
+    }
 
-@media (max-width:600px) {
-  .nav {
-    padding: 16px 20px;
-  }
+    @media (max-width:600px) {
+      .nav {
+        padding: 16px 20px;
+      }
 
-  .nav-links {
-    gap: 14px;
-  }
+      .nav-links {
+        gap: 14px;
+      }
 
-  .nav-links a {
-    font-size: 9.5px;
-  }
+      .nav-links a {
+        font-size: 9.5px;
+      }
 
-  .nav-cta {
-    font-size: 9px;
-  }
-}
+      .nav-cta {
+        font-size: 9px;
+      }
+    }
 
     /* ---------- hero photo (signature: real photo, monochrome, static) ---------- */
     .hero-photo {
@@ -487,46 +490,38 @@
       margin-top: 16px;
     }
 
-    .objective-bar {
-      position: relative;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 70px 24px;
-      text-align: center;
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 500;
-      font-size: 19px;
-      line-height: 1.7;
-      color: var(--ink);
-    }
+.objective-section {
+  width: 100%;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87)),
+    url('hero2.jpg') center 42%/cover no-repeat;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
-    .objective-bar .quote-mark {
-      display: block;
-      font-family: var(--serif);
-      font-style: normal;
-      font-weight: 700;
-      font-size: 64px;
-      line-height: 1;
-      color: var(--ink-faint);
-      margin-bottom: 8px;
-    }
+.objective-bar {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--ink);
+}
 
-    .objective-bar::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 100vw;
-      margin-left: -50vw;
-      background:
-        linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87)),
-        url('hero2.jpg') center 42%/cover no-repeat;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      z-index: -1;
-    }
+.objective-bar .quote-mark {
+  display: block;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
 
     /* ---------- coverage bars ---------- */
     .cov-item+.cov-item {
@@ -570,7 +565,7 @@
     }
 
     /* ---------- timeline (signature) ---------- */
-   /* ---------- timeline (signature) ---------- */
+    /* ---------- timeline (signature) ---------- */
     .timeline-head {
       text-align: center;
       padding: 96px 20px 10px;
@@ -1004,58 +999,63 @@
       padding: 2px 12px;
     }
 
-   .browser-body {
-  aspect-ratio: 16 / 10;
-  min-height: 220px;
-  background: var(--paper-alt);
-  overflow: hidden;
-  position: relative;
-}
+    .browser-body {
+      aspect-ratio: 16 / 10;
+      min-height: 220px;
+      background: var(--paper-alt);
+      overflow: hidden;
+      position: relative;
+    }
 
-.browser-card.featured .browser-body {
-  aspect-ratio: 16 / 9;
-  min-height: 320px;
-}
+    .browser-card.featured .browser-body {
+      aspect-ratio: 16 / 9;
+      min-height: 320px;
+    }
 
-.browser-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, var(--paper-alt) 0%, var(--line) 50%, var(--paper-alt) 100%);
-  background-size: 200% 100%;
-  animation: shimmer 1.4s infinite;
-  z-index: 1;
-}
+    .browser-body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--paper-alt) 0%, var(--line) 50%, var(--paper-alt) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      z-index: 1;
+    }
 
-.browser-body.is-loaded::before {
-  display: none;
-}
+    .browser-body.is-loaded::before {
+      display: none;
+    }
 
-.browser-body img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  filter: grayscale(1) contrast(1.05);
-  transition: filter 0.4s ease, transform 0.5s ease, opacity 0.3s ease;
-}
+    .browser-body img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      filter: grayscale(1) contrast(1.05);
+      transition: filter 0.4s ease, transform 0.5s ease, opacity 0.3s ease;
+    }
 
-.browser-body img.is-loaded {
-  opacity: 1;
-}
+    .browser-body img.is-loaded {
+      opacity: 1;
+    }
 
-.browser-card:hover .browser-body img {
-  filter: grayscale(0);
-  transform: scale(1.03);
-}
+    .browser-card:hover .browser-body img {
+      filter: grayscale(0);
+      transform: scale(1.03);
+    }
 
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
 
     .browser-caption {
       display: flex;
@@ -1066,7 +1066,7 @@
       border-top: 1px solid var(--line);
     }
 
-  
+
     .browser-card.featured {
       border-color: var(--ink);
     }
@@ -1159,8 +1159,9 @@
 
     .neutral .section-head {
       display: flex;
- flex-direction: column;
-  align-items: flex-start;      gap: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
       margin-bottom: 32px;
     }
 
@@ -1305,10 +1306,14 @@
       left: 0;
       color: var(--ink);
     }
-    
-#profile, #timeline, #work, #contact {
-  scroll-margin-top: 90px;
-}
+
+    #profile,
+    #timeline,
+    #work,
+    #contact {
+      scroll-margin-top: 90px;
+    }
+
     footer {
       position: relative;
       background: var(--paper);
@@ -1377,16 +1382,16 @@
 <body>
 
   <!-- NAV -->
-<nav class="nav">
-  <div class="nav-brand">A.R.P.D</div>
-  <div class="nav-links">
-    <a href="#profile" data-nav="profile">Profile</a>
-    <a href="#timeline" data-nav="timeline">Timeline</a>
-    <a href="#work" data-nav="work">Work</a>
-    <a href="#contact" data-nav="contact">Contact</a>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
-  </div>
-</nav>
+  <nav class="nav">
+    <div class="nav-brand">A.R.P.D</div>
+    <div class="nav-links">
+      <a href="#profile" data-nav="profile">Profile</a>
+      <a href="#timeline" data-nav="timeline">Timeline</a>
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </nav>
 
   <!-- HERO PHOTO: real photo, forced grayscale, static (no parallax) -->
   <div class="hero-photo" id="heroPhoto">
@@ -1419,467 +1424,467 @@
 
   <div class="page-content">
 
-  <div class="stat-strip-band">
-    <div class="stat-strip">
-      <div class="stat-item">
-        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <rect x="3" y="4" width="18" height="16" rx="1.5" />
-            <line x1="3" y1="9" x2="21" y2="9" />
-            <line x1="8" y1="4" x2="8" y2="9" />
-          </svg></div>
-        <div class="stat-num">17</div>
-        <div class="stat-label">Years Span</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <circle cx="12" cy="12" r="9" />
-            <circle cx="12" cy="12" r="3" />
-          </svg></div>
-        <div class="stat-num">4</div>
-        <div class="stat-label">QA Platforms</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M3 21V9l9-6 9 6v12" />
-            <path d="M9 21v-8h6v8" />
-          </svg></div>
-        <div class="stat-num">2</div>
-        <div class="stat-label">Businesses Run</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <rect x="4" y="4" width="16" height="16" rx="1.5" />
-            <path d="M8 9h8M8 13h8M8 17h5" />
-          </svg></div>
-        <div class="stat-num">6</div>
-        <div class="stat-label">Shipped Projects</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROFILE SUMMARY -->
-  <div id="profile" class="halves">
-    <div class="side-tech side-pad">
-      <span class="eyebrow">// QA &amp; Testing</span>
-      <h2>Manual Test Discipline</h2>
-      <p class="summary-text">Spent years testing mobile games at Gameloft. Titles like Asphalt 9, Disney Magic Kingdom,
-        Pastry, Ice Age Village, and The Blacklist passed through my hands before they shipped. Got trusted with Ads
-        Testing along the way and moved up to Junior 2.</p>
-      <p class="summary-text">Since 2023, freelancing as a Software QA Tester across Testbirds, Test IO, Tester Work,
-        and uTest. Picked up a few "Tester of the Week" wins and rated-tester badges here and there.</p>
-    </div>
-    <div class="side-biz side-pad">
-      <span class="eyebrow">✦ Building &amp; Business</span>
-      <h2>From Honey to Code</h2>
-      <p class="summary-text">Running Sabrina Honey since 2019, sourcing raw honey straight from local beekeepers and
-        packing it for resellers and retail shelves. Before that, tried my hand at herbal retail, bookstore marketing,
-        and even ran a small restaurant for a while.</p>
-      <p class="summary-text">In 2025 started building my own products using AI-assisted development ("vibe coding"): a
-        POS system for UMKM, a Flutter Qur'an app, an Umrah companion app, and a few client websites. Learned
-        architecture, deployment, and Supabase mostly by just doing it.</p>
-    </div>
-  </div>
-
-  <div class="objective-bar">
-    <span class="quote-mark">&#8220;</span>
-    "Looking for the next opportunity to grow further in software testing and AI-assisted product development, happy to
-    jump into projects that actually matter to the people using them. Open to any kind of work, really, as long as it
-    helps the company, stays within what's agreed with no exploitation, and lets me pick up new skills along the way."
-  </div>
-
-  <!-- SKILLS -->
-  <div class="halves">
-    <div class="side-tech side-pad">
-      <span class="eyebrow">coverage</span>
-      <h2>Technical &amp; QA Coverage</h2>
-      <div id="cov-tech"></div>
-    </div>
-    <div class="side-biz side-pad">
-      <span class="eyebrow">strengths</span>
-      <h2>Collaboration &amp; Drive</h2>
-      <div id="cov-biz"></div>
-    </div>
-  </div>
-
-  <!-- TIMELINE (SIGNATURE) -->
-  <div id="timeline" class="timeline-head">
-    <span class="eyebrow">03 · the spine</span>
-    <h2>Work History, Same Years Two Lives</h2>
-    <p>left: QA &amp; technical track · right: business &amp; ventures track</p>
-  </div>
-
-  <div class="timeline">
-
-    <!-- ERA: 2026 present -->
-    <div class="era">
-      <div class="era-tech">
-        <div class="mini-card is-current">
-          <span class="mc-role">Current · Full-time<span class="current-badge">Now</span></span>
-          <div class="mc-title">Web Developer</div>
-          <div class="mc-org">Nusabit · Jan 2026 – Present · Indonesia · Remote</div>
-          <div class="mc-desc">Building and shipping web products, bringing the same black-box testing habits and
-            attention to detail from the QA years into the code itself.</div>
+    <div class="stat-strip-band">
+      <div class="stat-strip">
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="3" y="4" width="18" height="16" rx="1.5" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+              <line x1="8" y1="4" x2="8" y2="9" />
+            </svg></div>
+          <div class="stat-num">17</div>
+          <div class="stat-label">Years Span</div>
         </div>
-      </div>
-      <div class="era-spine">
-        <div class="era-dot"></div>
-        <div class="era-year">2026<br>Present</div>
-      </div>
-      <div class="era-biz">
-        <div class="mini-card-biz is-current">
-          <span class="mc-role">Ongoing · Self-employed<span class="current-badge">Now</span></span>
-          <div class="mc-title">Business Owner</div>
-          <div class="mc-org">Sabrina Honey · Feb 2019 – Present · Yogyakarta · On-site</div>
-          <div class="mc-desc">Sources raw honey directly from local beekeepers, then packs it into 1kg, 500g, 330g, and
-            180g sizes for resellers and retail shelves.</div>
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="3" />
+            </svg></div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">QA Platforms</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M3 21V9l9-6 9 6v12" />
+              <path d="M9 21v-8h6v8" />
+            </svg></div>
+          <div class="stat-num">2</div>
+          <div class="stat-label">Businesses Run</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="4" y="4" width="16" height="16" rx="1.5" />
+              <path d="M8 9h8M8 13h8M8 17h5" />
+            </svg></div>
+          <div class="stat-num">6</div>
+          <div class="stat-label">Shipped Projects</div>
         </div>
       </div>
     </div>
 
-    <!-- ERA: 2023-2026 freelance QA -->
-    <div class="era">
-      <div class="era-tech">
-        <div class="mini-card">
-          <span class="mc-role">Freelance</span>
-          <div class="mc-title">Software QA Tester</div>
-          <div class="mc-org">uTest · Jan 2024 – Feb 2026 · Indonesia · Remote</div>
-          <div class="mc-desc">Worked test cases as provided, and a fair bit of exploratory testing, different teams,
-            TTLs, and TEs on each project.
-            <div class="achieve-box">
-              <b>uTest achievements</b>
+    <!-- PROFILE SUMMARY -->
+    <div id="profile" class="halves">
+      <div class="side-tech side-pad">
+        <span class="eyebrow">// QA &amp; Testing</span>
+        <h2>Manual Test Discipline</h2>
+        <p class="summary-text">Spent years testing mobile games at Gameloft. Titles like Asphalt 9, Disney Magic
+          Kingdom,
+          Pastry, Ice Age Village, and The Blacklist passed through my hands before they shipped. Got trusted with Ads
+          Testing along the way and moved up to Junior 2.</p>
+        <p class="summary-text">Since 2023, freelancing as a Software QA Tester across Testbirds, Test IO, Tester Work,
+          and uTest. Picked up a few "Tester of the Week" wins and rated-tester badges here and there.</p>
+      </div>
+      <div class="side-biz side-pad">
+        <span class="eyebrow">✦ Building &amp; Business</span>
+        <h2>From Honey to Code</h2>
+        <p class="summary-text">Running Sabrina Honey since 2019, sourcing raw honey straight from local beekeepers and
+          packing it for resellers and retail shelves. Before that, tried my hand at herbal retail, bookstore marketing,
+          and even ran a small restaurant for a while.</p>
+        <p class="summary-text">In 2025 started building my own products using AI-assisted development ("vibe coding"):
+          a
+          POS system for UMKM, a Flutter Qur'an app, an Umrah companion app, and a few client websites. Learned
+          architecture, deployment, and Supabase mostly by just doing it.</p>
+      </div>
+    </div>
+
+    <div class="objective-section">
+      <div class="objective-bar">
+        <span class="quote-mark">&#8220;</span>
+        "Looking for the next opportunity to grow further in software testing and AI-assisted product development, happy to
+        jump into projects that actually matter to the people using them. Open to any kind of work, really, as long as it
+        helps the company, stays within what's agreed with no exploitation, and lets me pick up new skills along the way."
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="halves">
+      <div class="side-tech side-pad">
+        <span class="eyebrow">coverage</span>
+        <h2>Technical &amp; QA Coverage</h2>
+        <div id="cov-tech"></div>
+      </div>
+      <div class="side-biz side-pad">
+        <span class="eyebrow">strengths</span>
+        <h2>Collaboration &amp; Drive</h2>
+        <div id="cov-biz"></div>
+      </div>
+    </div>
+
+    <!-- TIMELINE (SIGNATURE) -->
+    <div id="timeline" class="timeline-head">
+      <span class="eyebrow">03 · the spine</span>
+      <h2>Work History, Same Years Two Lives</h2>
+      <p>left: QA &amp; technical track · right: business &amp; ventures track</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- ERA: 2026 present -->
+      <div class="era">
+        <div class="era-tech">
+          <div class="mini-card is-current">
+            <span class="mc-role">Current · Full-time<span class="current-badge">Now</span></span>
+            <div class="mc-title">Web Developer</div>
+            <div class="mc-org">Nusabit · Jan 2026 – Present · Indonesia · Remote</div>
+            <div class="mc-desc">Building and shipping web products, bringing the same black-box testing habits and
+              attention to detail from the QA years into the code itself.</div>
+          </div>
+        </div>
+        <div class="era-spine">
+          <div class="era-dot"></div>
+          <div class="era-year">2026<br>Present</div>
+        </div>
+        <div class="era-biz">
+          <div class="mini-card-biz is-current">
+            <span class="mc-role">Ongoing · Self-employed<span class="current-badge">Now</span></span>
+            <div class="mc-title">Business Owner</div>
+            <div class="mc-org">Sabrina Honey · Feb 2019 – Present · Yogyakarta · On-site</div>
+            <div class="mc-desc">Sources raw honey directly from local beekeepers, then packs it into 1kg, 500g, 330g,
+              and
+              180g sizes for resellers and retail shelves.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA: 2023-2026 freelance QA -->
+      <div class="era">
+        <div class="era-tech">
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
+            <div class="mc-title">Software QA Tester</div>
+            <div class="mc-org">uTest · Jan 2024 – Feb 2026 · Indonesia · Remote</div>
+            <div class="mc-desc">Worked test cases as provided, and a fair bit of exploratory testing, different teams,
+              TTLs, and TEs on each project.
+              <div class="achieve-box">
+                <b>uTest achievements</b>
+                <ul>
+                  <li>Academy Tester of the Week (All Star &amp; Challenge Cycle)</li>
+                  <li>Silver, Bronze, Proven &amp; Rated Tester badges</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
+            <div class="mc-title">Software QA Tester</div>
+            <div class="mc-org">Test IO · Nov 2023 – Feb 2026 · Yogyakarta, Indonesia · Remote</div>
+            <div class="mc-desc">Manual &amp; exploratory test execution across concurrent client projects.</div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
+            <div class="mc-title">Software QA Tester</div>
+            <div class="mc-org">Testbirds · Dec 2023 – Present · Indonesia · Remote</div>
+            <div class="mc-desc">QA and test execution across various client projects.</div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
+            <div class="mc-title">Software QA Tester</div>
+            <div class="mc-org">Tester Work · 2023 – Present · Remote</div>
+            <div class="mc-desc">Manual and software testing across client engagements.</div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-role">Freelance</span>
+            <div class="mc-title">Software QA Tester</div>
+            <div class="mc-org">Sorjati · Feb 2025 – May 2025 · Sewon, Yogyakarta · Remote</div>
+            <div class="mc-desc">Tested warehouse, procurement, and sales software for a goat meat business. Day to day
+              meant flagging bugs and going back and forth with the dev team on fixes.</div>
+          </div>
+        </div>
+        <div class="era-spine">
+          <div class="era-dot"></div>
+          <div class="era-year">2023–26<br>QA rush</div>
+        </div>
+        <div class="era-biz">
+          <div class="empty-slot-biz">Sabrina Honey continues running in the background.</div>
+        </div>
+      </div>
+
+      <!-- ERA: 2019-2023 career break / ventures -->
+      <div class="era era-collapsible" data-collapsed="true">
+        <div class="era-tech">
+          <div class="empty-slot">Career break from QA testing.</div>
+        </div>
+        <div class="era-spine">
+          <div class="era-dot"></div>
+          <div class="era-year">2019–23<br>Ventures</div>
+          <button class="era-toggle" aria-expanded="false" aria-label="Toggle era details">
+            <span class="era-toggle-icon">+</span>
+          </button>
+        </div>
+        <div class="era-biz">
+          <div class="era-summary-line">6 roles · culinary, herbal retail, online marketing &amp; more →</div>
+          <div class="era-detail">
+            <div class="mini-card-biz">
+              <span class="mc-role">Career break</span>
+              <div class="mc-title">Personal Goal Pursuit</div>
+              <div class="mc-org">Oct 2019 – Dec 2023 · Yogyakarta</div>
+              <div class="mc-desc">Tried a bit of everything (culinary, selling herbs, books, dates) before landing on
+                raw
+                honey.</div>
+            </div>
+            <div class="mini-card-biz">
+              <span class="mc-role">Full-time</span>
+              <div class="mc-title">Online Shop Admin Specialist</div>
+              <div class="mc-org">Herbamart · Sep 2021 – May 2022 · Yogyakarta</div>
+              <div class="mc-desc">Online shop operations &amp; marketplace presence.</div>
+            </div>
+            <div class="mini-card-biz">
+              <span class="mc-role">Full-time</span>
+              <div class="mc-title">Online Marketing Specialist</div>
+              <div class="mc-org">Luqman Herbal · Feb 2021 – Sep 2021 · Yogyakarta</div>
+              <div class="mc-desc">Online marketing &amp; content with Adobe Spark.</div>
+            </div>
+            <div class="mini-card-biz">
+              <span class="mc-role">Full-time</span>
+              <div class="mc-title">Marketing Advertising Specialist</div>
+              <div class="mc-org">AHC Sunnah Bookstore · Sep 2020 – Mar 2021 · Yogyakarta</div>
+              <div class="mc-desc">Marketing &amp; advertising initiatives.</div>
+            </div>
+            <div class="mini-card-biz">
+              <span class="mc-role">Part-time</span>
+              <div class="mc-title">Onlineshop Market Admin</div>
+              <div class="mc-org">Garasi Herbal · Aug 2020 – Sep 2020 · Yogyakarta</div>
+              <div class="mc-desc">Night-shift data entry &amp; marketplace admin.</div>
+            </div>
+            <div class="mini-card-biz">
+              <span class="mc-role">Self-employed</span>
+              <div class="mc-title">Restaurant Owner</div>
+              <div class="mc-org">Kedai Pi7oe · Oct 2019 – Apr 2020 · Yogyakarta</div>
+              <div class="mc-desc">Ran independently until pausing for the COVID-19 pandemic.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA: 2015-2019 Game QA -->
+      <div class="era">
+        <div class="era-tech">
+          <div class="mini-card">
+            <span class="mc-role">Full-time · On-site</span>
+            <div class="mc-title">QA Engineer / QA Specialist</div>
+            <div class="mc-org">WHAT (games) · May 2018 – Oct 2019</div>
+            <div class="mc-desc">Tested games for the WHAT (GAMES) team; concurrent QA Specialist scope.</div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-role">Full-time</span>
+            <div class="mc-title">QA Tester</div>
+            <div class="mc-org">Gameloft · Apr 2015 – Oct 2019</div>
+            <div class="mc-desc">
               <ul>
-                <li>Academy Tester of the Week (All Star &amp; Challenge Cycle)</li>
-                <li>Silver, Bronze, Proven &amp; Rated Tester badges</li>
+                <li>Manual testing of mobile games for smooth gameplay.</li>
+                <li>Asphalt 9, Disney Magic Kingdom, Pastry, Ice Age Village, The Blacklist.</li>
+                <li>Trusted Ads Tester; elevated to Junior 2.</li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="mini-card">
-          <span class="mc-role">Freelance</span>
-          <div class="mc-title">Software QA Tester</div>
-          <div class="mc-org">Test IO · Nov 2023 – Feb 2026 · Yogyakarta, Indonesia · Remote</div>
-          <div class="mc-desc">Manual &amp; exploratory test execution across concurrent client projects.</div>
+        <div class="era-spine">
+          <div class="era-dot"></div>
+          <div class="era-year">2015–19<br>Game QA</div>
         </div>
-        <div class="mini-card">
-          <span class="mc-role">Freelance</span>
-          <div class="mc-title">Software QA Tester</div>
-          <div class="mc-org">Testbirds · Dec 2023 – Present · Indonesia · Remote</div>
-          <div class="mc-desc">QA and test execution across various client projects.</div>
-        </div>
-        <div class="mini-card">
-          <span class="mc-role">Freelance</span>
-          <div class="mc-title">Software QA Tester</div>
-          <div class="mc-org">Tester Work · 2023 – Present · Remote</div>
-          <div class="mc-desc">Manual and software testing across client engagements.</div>
-        </div>
-        <div class="mini-card">
-          <span class="mc-role">Freelance</span>
-          <div class="mc-title">Software QA Tester</div>
-          <div class="mc-org">Sorjati · Feb 2025 – May 2025 · Sewon, Yogyakarta · Remote</div>
-          <div class="mc-desc">Tested warehouse, procurement, and sales software for a goat meat business. Day to day
-            meant flagging bugs and going back and forth with the dev team on fixes.</div>
+        <div class="era-biz">
+          <div class="empty-slot-biz">No ventures on record for this period.</div>
         </div>
       </div>
-      <div class="era-spine">
-        <div class="era-dot"></div>
-        <div class="era-year">2023–26<br>QA rush</div>
-      </div>
-      <div class="era-biz">
-        <div class="empty-slot-biz">Sabrina Honey continues running in the background.</div>
-      </div>
-    </div>
 
-    <!-- ERA: 2019-2023 career break / ventures -->
-    <div class="era era-collapsible" data-collapsed="true">
-      <div class="era-tech">
-        <div class="empty-slot">Career break from QA testing.</div>
-      </div>
-      <div class="era-spine">
-        <div class="era-dot"></div>
-        <div class="era-year">2019–23<br>Ventures</div>
-        <button class="era-toggle" aria-expanded="false" aria-label="Toggle era details">
-          <span class="era-toggle-icon">+</span>
-        </button>
-      </div>
-      <div class="era-biz">
-        <div class="era-summary-line">6 roles · culinary, herbal retail, online marketing &amp; more →</div>
-        <div class="era-detail">
-          <div class="mini-card-biz">
-            <span class="mc-role">Career break</span>
-            <div class="mc-title">Personal Goal Pursuit</div>
-            <div class="mc-org">Oct 2019 – Dec 2023 · Yogyakarta</div>
-            <div class="mc-desc">Tried a bit of everything (culinary, selling herbs, books, dates) before landing on raw
-              honey.</div>
-          </div>
-          <div class="mini-card-biz">
-            <span class="mc-role">Full-time</span>
-            <div class="mc-title">Online Shop Admin Specialist</div>
-            <div class="mc-org">Herbamart · Sep 2021 – May 2022 · Yogyakarta</div>
-            <div class="mc-desc">Online shop operations &amp; marketplace presence.</div>
-          </div>
-          <div class="mini-card-biz">
-            <span class="mc-role">Full-time</span>
-            <div class="mc-title">Online Marketing Specialist</div>
-            <div class="mc-org">Luqman Herbal · Feb 2021 – Sep 2021 · Yogyakarta</div>
-            <div class="mc-desc">Online marketing &amp; content with Adobe Spark.</div>
-          </div>
-          <div class="mini-card-biz">
-            <span class="mc-role">Full-time</span>
-            <div class="mc-title">Marketing Advertising Specialist</div>
-            <div class="mc-org">AHC Sunnah Bookstore · Sep 2020 – Mar 2021 · Yogyakarta</div>
-            <div class="mc-desc">Marketing &amp; advertising initiatives.</div>
-          </div>
-          <div class="mini-card-biz">
-            <span class="mc-role">Part-time</span>
-            <div class="mc-title">Onlineshop Market Admin</div>
-            <div class="mc-org">Garasi Herbal · Aug 2020 – Sep 2020 · Yogyakarta</div>
-            <div class="mc-desc">Night-shift data entry &amp; marketplace admin.</div>
-          </div>
-          <div class="mini-card-biz">
-            <span class="mc-role">Self-employed</span>
-            <div class="mc-title">Restaurant Owner</div>
-            <div class="mc-org">Kedai Pi7oe · Oct 2019 – Apr 2020 · Yogyakarta</div>
-            <div class="mc-desc">Ran independently until pausing for the COVID-19 pandemic.</div>
-          </div>
+      <!-- ERA: 2009-2015 -->
+      <!-- ERA: 2009-2015 -->
+      <div class="era era-collapsible" data-collapsed="true">
+        <div class="era-tech">
+          <div class="empty-slot">Pre-QA career.</div>
         </div>
-      </div>
-    </div>
-
-    <!-- ERA: 2015-2019 Game QA -->
-    <div class="era">
-      <div class="era-tech">
-        <div class="mini-card">
-          <span class="mc-role">Full-time · On-site</span>
-          <div class="mc-title">QA Engineer / QA Specialist</div>
-          <div class="mc-org">WHAT (games) · May 2018 – Oct 2019</div>
-          <div class="mc-desc">Tested games for the WHAT (GAMES) team; concurrent QA Specialist scope.</div>
+        <div class="era-spine">
+          <div class="era-dot"></div>
+          <div class="era-year">2009–15<br>Origins</div>
+          <button class="era-toggle" aria-expanded="false" aria-label="Toggle era details">
+            <span class="era-toggle-icon">+</span>
+          </button>
         </div>
-        <div class="mini-card">
-          <span class="mc-role">Full-time</span>
-          <div class="mc-title">QA Tester</div>
-          <div class="mc-org">Gameloft · Apr 2015 – Oct 2019</div>
-          <div class="mc-desc">
-            <ul>
-              <li>Manual testing of mobile games for smooth gameplay.</li>
-              <li>Asphalt 9, Disney Magic Kingdom, Pastry, Ice Age Village, The Blacklist.</li>
-              <li>Trusted Ads Tester; elevated to Junior 2.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="era-spine">
-        <div class="era-dot"></div>
-        <div class="era-year">2015–19<br>Game QA</div>
-      </div>
-      <div class="era-biz">
-        <div class="empty-slot-biz">No ventures on record for this period.</div>
-      </div>
-    </div>
-
-    <!-- ERA: 2009-2015 -->
-  <!-- ERA: 2009-2015 -->
-  <div class="era era-collapsible" data-collapsed="true">
-    <div class="era-tech">
-      <div class="empty-slot">Pre-QA career.</div>
-    </div>
-    <div class="era-spine">
-      <div class="era-dot"></div>
-      <div class="era-year">2009–15<br>Origins</div>
-      <button class="era-toggle" aria-expanded="false" aria-label="Toggle era details">
-        <span class="era-toggle-icon">+</span>
-      </button>
-    </div>
-    <div class="era-biz">
-      <div class="era-summary-line">1 role · customer service &amp; early beginnings →</div>
-      <div class="era-detail">
-        <div class="mini-card-biz">
-          <span class="mc-role">Part-time · On-site</span>
-          <div class="mc-title">Customer Service Staff</div>
-          <div class="mc-org">Bimasakti Disc House · Apr 2009 – Mar 2015 · Sleman, Yogyakarta</div>
-          <div class="mc-desc">Customer service, data entry, stock control; also sourced and screened candidates for
-            team vacancies, all while still in college.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  </div>
-
-  <!-- PORTFOLIO -->
-  <div id="work" class="halves">
-    <div class="side-tech side-pad">
-      <div class="section-eyebrow-row"><span class="section-index">04</span><span class="eyebrow"
-          style="margin-bottom:0;">artifacts/</span></div>
-      <h2>Tech Builds</h2>
-      <div class="artifact-list">
-
-        <a class="browser-card featured" href="https://nusapos.vercel.app" target="_blank" rel="noopener">
-          <div class="browser-chrome">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="browser-url">nusapos.vercel.app</span>
-          </div>
-          <div class="browser-body">
-             <img
-              src="pos.jpg"
-              alt="NusaPOS point-of-sale interface screenshot" loading="lazy">
-          </div>
-          <div class="browser-caption">
-            <div>
-              <span class="art-status">● LIVE &nbsp; Featured Project</span>
-              <span class="art-name">NusaPOS</span>
-              <span class="art-desc">Point-of-sale system built for UMKM sellers</span>
-            </div>
-            <span class="featured-tag">Featured</span>
-          </div>
-        </a>
-
-        <a class="doc-card" href="https://docs.google.com/presentation/d/1Wo4lvuK2VQncTzygwrqDLb3xXKmRBwZm5bK18zRoP1E"
-          target="_blank" rel="noopener">
-          <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-              <rect x="3" y="5" width="18" height="12" rx="1" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-            </svg></span>
-          <div>
-            <span class="art-status">● DECK</span>
-            <span class="art-name">QA Portfolio Deck</span>
-            <span class="art-desc">Tap to open presentation</span>
-          </div>
-        </a>
-        <a class="doc-card" href="https://github.com/Ageha-Ze" target="_blank" rel="noopener">
-          <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-              <path
-                d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
-            </svg></span>
-          <div>
-            <span class="art-status">● REPO</span>
-            <span class="art-name">github.com/Ageha-Ze</span>
-            <span class="art-desc">Source code &amp; projects</span>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="side-biz side-pad">
-      <div class="section-eyebrow-row"><span class="section-index">·</span><span class="eyebrow"
-          style="margin-bottom:0;">✦ storefronts</span></div>
-      <h2>Business &amp; Client Sites</h2>
-      <div class="artifact-list">
-
-        <a class="browser-card featured" href="https://madusabrina.vercel.app" target="_blank" rel="noopener">
-          <div class="browser-chrome">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="browser-url">madusabrina.vercel.app</span>
-          </div>
-          <div class="browser-body">
-            <img
-              src="honey.jpg"
-              alt="Sabrina Honey homepage screenshot" loading="lazy">
-          </div>
-          <div class="browser-caption">
-            <div>
-              <span class="art-status">● LIVE</span>
-              <span class="art-name">Sabrina Honey</span>
-              <span class="art-desc">Storefront for the family honey business</span>
+        <div class="era-biz">
+          <div class="era-summary-line">1 role · customer service &amp; early beginnings →</div>
+          <div class="era-detail">
+            <div class="mini-card-biz">
+              <span class="mc-role">Part-time · On-site</span>
+              <div class="mc-title">Customer Service Staff</div>
+              <div class="mc-org">Bimasakti Disc House · Apr 2009 – Mar 2015 · Sleman, Yogyakarta</div>
+              <div class="mc-desc">Customer service, data entry, stock control; also sourced and screened candidates for
+                team vacancies, all while still in college.</div>
             </div>
           </div>
-        </a>
+        </div>
+      </div>
 
-        <a class="browser-card" href="https://pie-nana.vercel.app/" target="_blank" rel="noopener">
-          <div class="browser-chrome">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="browser-url">pie-nana.vercel.app</span>
-          </div>
-          <div class="browser-body">
-            <img
-              src="pie.jpg"
-              alt="Pie Nana product menu screenshot" loading="lazy">
-          </div>
-          <div class="browser-caption">
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="work" class="halves">
+      <div class="side-tech side-pad">
+        <div class="section-eyebrow-row"><span class="section-index">04</span><span class="eyebrow"
+            style="margin-bottom:0;">artifacts/</span></div>
+        <h2>Tech Builds</h2>
+        <div class="artifact-list">
+
+          <a class="browser-card featured" href="https://nusapos.vercel.app" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">nusapos.vercel.app</span>
+            </div>
+            <div class="browser-body">
+              <img src="pos.jpg" alt="NusaPOS point-of-sale interface screenshot" loading="lazy">
+            </div>
+            <div class="browser-caption">
+              <div>
+                <span class="art-status">● LIVE &nbsp; Featured Project</span>
+                <span class="art-name">NusaPOS</span>
+                <span class="art-desc">Point-of-sale system built for UMKM sellers</span>
+              </div>
+              <span class="featured-tag">Featured</span>
+            </div>
+          </a>
+
+          <a class="doc-card" href="https://docs.google.com/presentation/d/1Wo4lvuK2VQncTzygwrqDLb3xXKmRBwZm5bK18zRoP1E"
+            target="_blank" rel="noopener">
+            <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="5" width="18" height="12" rx="1" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg></span>
             <div>
-              <span class="art-status">● LIVE</span>
-              <span class="art-name">Pie Nana</span>
-              <span class="art-desc">Client brand website</span>
+              <span class="art-status">● DECK</span>
+              <span class="art-name">QA Portfolio Deck</span>
+              <span class="art-desc">Tap to open presentation</span>
+            </div>
+          </a>
+          <a class="doc-card" href="https://github.com/Ageha-Ze" target="_blank" rel="noopener">
+            <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path
+                  d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+              </svg></span>
+            <div>
+              <span class="art-status">● REPO</span>
+              <span class="art-name">github.com/Ageha-Ze</span>
+              <span class="art-desc">Source code &amp; projects</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="side-biz side-pad">
+        <div class="section-eyebrow-row"><span class="section-index">·</span><span class="eyebrow"
+            style="margin-bottom:0;">✦ storefronts</span></div>
+        <h2>Business &amp; Client Sites</h2>
+        <div class="artifact-list">
+
+          <a class="browser-card featured" href="https://madusabrina.vercel.app" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">madusabrina.vercel.app</span>
+            </div>
+            <div class="browser-body">
+              <img src="honey.jpg" alt="Sabrina Honey homepage screenshot" loading="lazy">
+            </div>
+            <div class="browser-caption">
+              <div>
+                <span class="art-status">● LIVE</span>
+                <span class="art-name">Sabrina Honey</span>
+                <span class="art-desc">Storefront for the family honey business</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="browser-card" href="https://pie-nana.vercel.app/" target="_blank" rel="noopener">
+            <div class="browser-chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="browser-url">pie-nana.vercel.app</span>
+            </div>
+            <div class="browser-body">
+              <img src="pie.jpg" alt="Pie Nana product menu screenshot" loading="lazy">
+            </div>
+            <div class="browser-caption">
+              <div>
+                <span class="art-status">● LIVE</span>
+                <span class="art-name">Pie Nana</span>
+                <span class="art-desc">Client brand website</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORK HISTORY: SAME YEARS, TWO LIVES (personal touch) -->
+    <div class="neutral">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">05 · beyond the desk</span>
+          <h2>Work History, Same Years, Two Lives</h2>
+        </div>
+        <p
+          style="font-family:var(--serif); font-style:italic; color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:40px;">
+          Two tracks looks tidy on paper. Here's what was running alongside it, the same years, the whole time.</p>
+        <div class="worklife-split">
+          <div class="worklife-col">
+            <span class="worklife-col-label">Track 01 : On the record</span>
+            <div class="worklife-item">
+              <div class="worklife-year">2009 – 2015</div>
+              <h3>Education</h3>
+              <p><strong>Bachelor Degree / S1, Informatics Engineering</strong>
+                <span class="sub">UPN "Veteran" Yogyakarta</span>
+              </p>
+            </div>
+            <div class="worklife-item">
+              <div class="worklife-year">Ongoing</div>
+              <h3>Currently Learning</h3>
+              <p>Sharpening full-stack skills, Next.js, Supabase, and AI-assisted development, while keeping the manual
+                QA fundamentals sharp too.</p>
             </div>
           </div>
-        </a>
+          <div class="worklife-divider"></div>
+          <div class="worklife-col">
+            <span class="worklife-col-label">Track 02 : Off the record</span>
+            <div class="worklife-item">
+              <div class="worklife-year">Ongoing</div>
+              <h3>Outside Work</h3>
+              <ul>
+                <li>Into fitness, mixes strength training with cardio, nothing too rigid.</li>
+                <li>Likes picking up new tools by just diving in and figuring things out, lately that's meant a lot of
+                  AI-assisted coding.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- WORK HISTORY: SAME YEARS, TWO LIVES (personal touch) -->
-  <div class="neutral">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">05 · beyond the desk</span>
-        <h2>Work History, Same Years, Two Lives</h2>
-      </div>
-      <p
-        style="font-family:var(--serif); font-style:italic; color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:40px;">
-        Two tracks looks tidy on paper. Here's what was running alongside it, the same years, the whole time.</p>
-      <div class="worklife-split">
-        <div class="worklife-col">
-          <span class="worklife-col-label">Track 01 : On the record</span>
-          <div class="worklife-item">
-            <div class="worklife-year">2009 – 2015</div>
-            <h3>Education</h3>
-            <p><strong>Bachelor Degree / S1, Informatics Engineering</strong>
-              <span class="sub">UPN "Veteran" Yogyakarta</span>
-            </p>
-          </div>
-          <div class="worklife-item">
-            <div class="worklife-year">Ongoing</div>
-            <h3>Currently Learning</h3>
-            <p>Sharpening full-stack skills, Next.js, Supabase, and AI-assisted development, while keeping the manual
-              QA fundamentals sharp too.</p>
-          </div>
+    <footer id="contact">
+      <div class="wrap">
+        <div class="footer-line"></div>
+        <p class="footer-tagline">"Currently building products that solve real problems, one test case and one jar of
+          honey at a time."</p>
+        <div class="section-head" style="margin-bottom:20px;">
+          <span class="eyebrow">06 · contact</span>
+          <h2>Get in Touch</h2>
         </div>
-        <div class="worklife-divider"></div>
-        <div class="worklife-col">
-          <span class="worklife-col-label">Track 02 : Off the record</span>
-          <div class="worklife-item">
-            <div class="worklife-year">Ongoing</div>
-            <h3>Outside Work</h3>
-            <ul>
-              <li>Into fitness, mixes strength training with cardio, nothing too rigid.</li>
-              <li>Likes picking up new tools by just diving in and figuring things out, lately that's meant a lot of
-                AI-assisted coding.</li>
-            </ul>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="k">Address</div>
+            <div class="v">Yogyakarta, Bantul 55281</div>
+          </div>
+          <div class="contact-item">
+            <div class="k">Phone</div>
+            <div class="v">08993071991</div>
+          </div>
+          <div class="contact-item">
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:aghasyrezandi@gmail.com">aghasyrezandi@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="k">LinkedIn</div>
+            <div class="v"><a href="https://linkedin.com/in/aghasy-rezandi-31454a23a/" target="_blank"
+                rel="noopener">aghasy-rezandi-31454a23a</a></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <footer id="contact">
-    <div class="wrap">
-      <div class="footer-line"></div>
-      <p class="footer-tagline">"Currently building products that solve real problems, one test case and one jar of
-        honey at a time."</p>
-      <div class="section-head" style="margin-bottom:20px;">
-        <span class="eyebrow">06 · contact</span>
-        <h2>Get in Touch</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="k">Address</div>
-          <div class="v">Yogyakarta, Bantul 55281</div>
-        </div>
-        <div class="contact-item">
-          <div class="k">Phone</div>
-          <div class="v">08993071991</div>
-        </div>
-        <div class="contact-item">
-          <div class="k">Email</div>
-          <div class="v"><a href="mailto:aghasyrezandi@gmail.com">aghasyrezandi@gmail.com</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="k">LinkedIn</div>
-          <div class="v"><a href="https://linkedin.com/in/aghasy-rezandi-31454a23a/" target="_blank"
-              rel="noopener">aghasy-rezandi-31454a23a</a></div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   </div><!-- /.page-content -->
 
@@ -1924,56 +1929,56 @@
     }, { threshold: 0.3 });
     bars.forEach(b => observer.observe(b));
     // scroll-spy for nav
-      const navLinks = document.querySelectorAll('.nav-links a');
-      const sections = ['profile', 'timeline', 'work', 'contact']
-        .map(id => document.getElementById(id))
-        .filter(Boolean);
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = ['profile', 'timeline', 'work', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
 
-      const navObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navLinks.forEach(link => {
-              link.classList.toggle('active', link.dataset.nav === id);
-            });
-          }
-        });
-      }, {
-        rootMargin: '-40% 0px -55% 0px', // trigger when section is roughly in middle of viewport
-        threshold: 0
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.nav === id);
+          });
+        }
       });
+    }, {
+      rootMargin: '-40% 0px -55% 0px', // trigger when section is roughly in middle of viewport
+      threshold: 0
+    });
 
-      sections.forEach(sec => navObserver.observe(sec));
+    sections.forEach(sec => navObserver.observe(sec));
 
-      document.querySelectorAll('.era-toggle').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const era = btn.closest('.era-collapsible');
-            const isCollapsed = era.dataset.collapsed !== 'false';
-            era.dataset.collapsed = String(!isCollapsed);
-            btn.setAttribute('aria-expanded', String(isCollapsed));
-          });
-        });
+    document.querySelectorAll('.era-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const era = btn.closest('.era-collapsible');
+        const isCollapsed = era.dataset.collapsed !== 'false';
+        era.dataset.collapsed = String(!isCollapsed);
+        btn.setAttribute('aria-expanded', String(isCollapsed));
+      });
+    });
 
-        document.querySelectorAll('.era-summary-line').forEach(line => {
-          line.addEventListener('click', () => {
-            const era = line.closest('.era-collapsible');
-            era.dataset.collapsed = 'false';
-            era.querySelector('.era-toggle')?.setAttribute('aria-expanded', 'true');
-          });
-        });
+    document.querySelectorAll('.era-summary-line').forEach(line => {
+      line.addEventListener('click', () => {
+        const era = line.closest('.era-collapsible');
+        era.dataset.collapsed = 'false';
+        era.querySelector('.era-toggle')?.setAttribute('aria-expanded', 'true');
+      });
+    });
 
-        document.querySelectorAll('.browser-body img').forEach(img => {
-            const markLoaded = () => {
-              img.classList.add('is-loaded');
-              img.closest('.browser-body')?.classList.add('is-loaded');
-            };
-            if (img.complete && img.naturalWidth > 0) {
-              markLoaded();
-            } else {
-              img.addEventListener('load', markLoaded);
-              img.addEventListener('error', () => img.closest('.browser-body')?.classList.add('is-loaded'));
-            }
-          });
+    document.querySelectorAll('.browser-body img').forEach(img => {
+      const markLoaded = () => {
+        img.classList.add('is-loaded');
+        img.closest('.browser-body')?.classList.add('is-loaded');
+      };
+      if (img.complete && img.naturalWidth > 0) {
+        markLoaded();
+      } else {
+        img.addEventListener('load', markLoaded);
+        img.addEventListener('error', () => img.closest('.browser-body')?.classList.add('is-loaded'));
+      }
+    });
   </script>
 
 </body>
